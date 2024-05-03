@@ -1,4 +1,5 @@
 import React from 'react'
+import SquirrelSingle from './SquirrelSingle'
 
 function SquirrelIndex() {
   return (
