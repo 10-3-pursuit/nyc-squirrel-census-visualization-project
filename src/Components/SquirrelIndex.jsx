@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import SquirrelSingle from './SquirrelSingle';
+import { useNavigate } from 'react-router-dom';
 
 const SQUIRREL_API = import.meta.env.VITE_SQUIRREL_BASE_URL;
 // const TOKEN = 'eZIzdsDMgsnkjT1pzulLjDoSY'; 
@@ -7,6 +8,7 @@ const VITE_SQUIRREL_TOCKEN = import.meta.env.VITE_SQUIRREL_TOCKEN;
 
 function SquirrelIndex() {
     const [squirrels, setSquirrels] = useState([]);
+    const navigate = useNavigate();
 
     useEffect(() => {
         const fetchSquirrels = async () => {
@@ -25,6 +27,10 @@ function SquirrelIndex() {
         fetchSquirrels();
     }, []);
 
+    const handleClick = (id) => {
+        navigate(`/squirrels/${id}`);
+    };
+
     return (
         <div className="container mx-auto px-20 p-10">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -32,7 +38,7 @@ function SquirrelIndex() {
                     squirrels
                         .filter(squirrel => squirrel.unique_squirrel_id !== null)
                         .map(squirrel => (
-                            <div key={squirrel.unique_squirrel_id} className="h-full">
+                            <div key={squirrel.unique_squirrel_id} className="h-full cursor-pointer" onClick={() => handleClick(squirrel.unique_squirrel_id)}>
                                 <SquirrelSingle
                                     squirrel={squirrel}
                                 />
