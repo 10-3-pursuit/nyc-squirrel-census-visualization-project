@@ -2,6 +2,9 @@ import { Link } from "react-router-dom";
 import { User } from "lucide-react";
 import { Library } from "lucide-react";
 
+
+
+
 const Nav = () => {
   return (
     <div>
@@ -9,7 +12,7 @@ const Nav = () => {
         <div className="px-4 py-4 flex flex-row justify-between">
           <Link to={"/"}>
             <div className="font-bold text-2xl text-white inline-block">
-              <span className="">C</span>ourse
+              <span className="">S</span>quirrel
               <span className="">Q</span>uest
             </div>
           </Link>
