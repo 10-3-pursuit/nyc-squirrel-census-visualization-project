@@ -27,7 +27,19 @@ function SquirrelIndex() {
 
     return (
         <div className="container mx-auto px-20 p-10">
-
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {squirrels &&
+                    squirrels
+                        .filter(squirrel => squirrel.unique_squirrel_id !== null)
+                        .map(squirrel => (
+                            <div key={squirrel.unique_squirrel_id} className="h-full">
+                                <SquirrelSingle
+                                    squirrel={squirrel}
+                                />
+                            </div>
+                        ))
+                }
+            </div>
         </div>
     );
 }
