@@ -10,18 +10,16 @@ const LandingPage = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
               <div>
                 <h1 className="text-4xl md:text-6xl font-bold mb-5">
-                  Welcome to CourseQuest
+                  Welcome to SquirrelQuest
                 </h1>
                 <p className="text-lg md:text-xl mb-8">
-                  Empower your learning journey with CourseQuest, where you can
-                  access a vast array of courses anytime, anywhere. Whether
-                  you're a student seeking academic excellence or an enthusiast
-                  exploring new hobbies, CourseQuest has something for everyone.
+
+                Embark on an enchanting adventure through Central Park with SquirrelQuest. Our app guides you to the spots where these furry creatures dwell, allowing you to immerse yourself in their world. Dive into captivating stories about their antics and behaviors, enriching your experience as you explore the park. SquirrelQuest invites you to discover the beauty of nature and the charm of New York's iconic green oasis like never before.
                 </p>
                 <button
                   href="#"
                   className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded inline-block"
-                  onClick={() => navigate("/courses")}
+                  onClick={() => navigate("/squirrels")}
                 >
                   Get Started
                 </button>
