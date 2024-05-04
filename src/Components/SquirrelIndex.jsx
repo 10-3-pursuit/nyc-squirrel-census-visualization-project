@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 const SQUIRREL_API = import.meta.env.VITE_SQUIRREL_BASE_URL;
 // const TOKEN = 'eZIzdsDMgsnkjT1pzulLjDoSY'; 
-const VITE_SQUIRREL_TOCKEN = import.meta.env.VITE_SQUIRREL_TOCKEN;
+const VITE_SQUIRREL_TOKEN = import.meta.env.VITE_SQUIRREL_TOKEN;
 
 function SquirrelIndex() {
     const [squirrels, setSquirrels] = useState([]);
@@ -13,7 +13,7 @@ function SquirrelIndex() {
     useEffect(() => {
         const fetchSquirrels = async () => {
             try {
-                const response = await fetch(`${SQUIRREL_API}?$$app_token=${VITE_SQUIRREL_TOCKEN}`);
+                const response = await fetch(`${SQUIRREL_API}?$$app_token=${VITE_SQUIRREL_TOKEN}`);
                 if (!response.ok) {
                     throw new Error('Failed to fetch data');
                 }
