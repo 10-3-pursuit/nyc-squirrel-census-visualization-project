@@ -8,7 +8,8 @@ import { Library } from "lucide-react";
 const Nav = () => {
   return (
     <div>
-      <div className="bg-gradient-to-r from-cyan-500 to-blue-500 shadow-lg shadow-sky-300">
+      {/* <div className="bg-gradient-to-r from-cyan-500 to-blue-500 shadow-lg shadow-sky-300"> */}
+      <div className="bg-gradient-to-r from-dark-orange  to-orange shadow-lg shadow-sky-300">
         <div className="px-4 py-4 flex flex-row justify-between">
           <Link to={"/"}>
             <div className="font-bold text-2xl text-white inline-block">

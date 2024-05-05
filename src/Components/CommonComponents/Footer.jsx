@@ -4,7 +4,7 @@ import { BsGithub } from "react-icons/bs";
 const Footer = () => {
   return (
     <footer>
-      <div className="bg-slate-500 px-4 fixed bottom-0 left-0 right-0">
+      <div className="bg-dark-orange px-4 fixed bottom-0 left-0 right-0">
         <div className="flex flex-row justify-between">
           <Link to={"/"}>
             <div className="lg:pr-16 font-bold text-2xl text-white inline-block pt-3 pr-10">

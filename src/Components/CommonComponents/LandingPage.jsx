@@ -5,7 +5,7 @@ const LandingPage = () => {
   return (
     <div className="">
       <div>
-        <section className="bg-gray-800 text-white py-20 px-5 md:px-20 h-screen">
+        <section className="bg-dark-teal text-mint px-5 md:px-20 h-screen">
           <div className="container mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
               <div>
@@ -18,7 +18,7 @@ const LandingPage = () => {
                 </p>
                 <button
                   href="#"
-                  className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded inline-block"
+                  className="bg-beige hover:bg-orange text-light-teal font-bold py-3 px-6 rounded inline-block"
                   onClick={() => navigate("/squirrels")}
                 >
                   Get Started
