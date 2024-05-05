@@ -22,10 +22,10 @@ const SquirrelDetailed = () => {
     useEffect(() => {
         async function fetchSquirrel() {
             try {
-                const response = await fetch(`${SQUIRREL_API}?$$app_token=${VITE_SQUIRREL_TOKEN}`);
+                const response = await fetch(`${SQUIRREL_API}?$$app_token=${VITE_SQUIRREL_TOKEN}&unique_squirrel_id=${id}`);
                 if (response.ok) {
-                    const data = await response.json();           
-                    const squirrelById = data.find(squirrel => squirrel.unique_squirrel_id === id);
+                    const data = await response.json();    
+                    const squirrelById = data[0];
                     if (squirrelById) {
                         setSquirrel(squirrelById);
                     } else {
