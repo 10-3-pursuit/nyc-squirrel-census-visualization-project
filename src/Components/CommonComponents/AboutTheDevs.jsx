@@ -18,10 +18,10 @@ const AboutTheDevs = () => {
             <div className="bg-gray-100/50 rounded-xl mx-10 my-10 shadow-2xl  backdrop-brightness-150 backdrop-blur-3xl bg-opacity-90 hover:bg-gray-100 w-3/4">
               <div className="grid grid-cols-4 h-full">
                 <div className="bg-red-500 rounded-tl-lg rounded-bl-lg text-5xl text-white flex items-center justify-center col-span-1">
-                  AG
+                  JG
                 </div>
                 <div className="pb-10 p-5 col-span-3">
-                  <div className="text-2xl ">Alexander Gonzalez</div>
+                  <div className="text-2xl ">Julissa Garcia</div>
                   <div>Software Engineer</div>
                   <div>
                     <div className="pt-2 flex flex-row">
@@ -49,7 +49,7 @@ const AboutTheDevs = () => {
                           />
                         </div>
                       </Link>
-                      <Link to="mailto:alexandergonzalez@pursuit.org">
+                      <Link to="mailto:JulissaGarcia@pursuit.org">
                         <div className="bg-green-500 rounded p-1 ml-4 hover:bg-black">
                           <Mail
                             strokeWidth={2}
@@ -62,51 +62,7 @@ const AboutTheDevs = () => {
                 </div>
               </div>
             </div>
-            <div className="bg-gray-100/50  rounded-xl mx-10 my-10 shadow-2xl  backdrop-brightness-150 backdrop-blur-3xl bg-opacity-90 hover:bg-gray-100 w-3/4 ">
-              <div className="grid grid-cols-4 h-full">
-                <div className="bg-amber-500 rounded-tl-lg rounded-bl-lg text-5xl text-white flex items-center justify-center col-span-1">
-                  JP
-                </div>
-                <div className="pb-10 p-5 col-span-3">
-                  <div className="text-2xl">Jennifer Peterson</div>
-                  <div>Software Engineer</div>
-                  <div>
-                    <div className="pt-2 flex flex-row">
-                      <Link
-                        to={"https://www.linkedin.com/in/jennifer--peterson/"}
-                        target={"_blank"}
-                      >
-                        <div className="bg-blue-500  rounded p-1 hover:bg-black">
-                          <Linkedin
-                            strokeWidth={2}
-                            className="text-white w-6 h-6"
-                          />
-                        </div>
-                      </Link>
-                      <Link
-                        to={"https://github.com/JenniferPeterson1203"}
-                        target={"_blank"}
-                      >
-                        <div className="bg-purple-500 rounded p-1 ml-4 hover:bg-black">
-                          <FiGithub
-                            strokeWidth={2}
-                            className="text-white w-6 h-6"
-                          />
-                        </div>
-                      </Link>
-                      <Link to="mailto:jenniferpeterson@pursuit.org">
-                        <div className="bg-green-500 rounded p-1 ml-4 hover:bg-black">
-                          <Mail
-                            strokeWidth={2}
-                            className="text-white w-6 h-6"
-                          />
-                        </div>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            
             <div className="bg-gray-100/50  rounded-xl mx-10 my-10 shadow-2xl  backdrop-brightness-150 backdrop-blur-3xl bg-opacity-90 hover:bg-gray-100 w-3/4 ">
               <div className="grid grid-cols-4 h-full">
                 <div className="bg-emerald-500 rounded-tl-lg rounded-bl-lg text-5xl text-white flex items-center justify-center col-span-1">
