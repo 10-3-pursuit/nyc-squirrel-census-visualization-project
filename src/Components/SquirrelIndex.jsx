@@ -1,15 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import SquirrelSingle from './SquirrelSingle';
 import { useNavigate } from 'react-router-dom';
-
 import {reverseRegion} from '../Helpers/SquirrelIndexHelper'
 import { generateNameFromID } from '../Helpers/SingleSquirrelHelper';
 
-
-
 const SQUIRREL_API = import.meta.env.VITE_SQUIRREL_BASE_URL;
 const VITE_SQUIRREL_TOKEN = import.meta.env.VITE_SQUIRREL_TOKEN;
-
 
 function SquirrelIndex() {
     const [squirrels, setSquirrels] = useState([]);
@@ -18,7 +14,6 @@ function SquirrelIndex() {
     const [searchQuery, setSearchQuery] = useState('');
     const [filteredSearchSquirrels, setFilteredSearchSquirrels] = useState([]);
     const navigate = useNavigate();
-
 
     useEffect(() => {
         const fetchSquirrels = async () => {
