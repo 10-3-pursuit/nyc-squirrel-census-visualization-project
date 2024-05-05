@@ -12,7 +12,7 @@ export default {
       },
       colors: {
         'black': '#001219',
-        'dark-teal': '#007912',
+        'dark-teal': '#005F73',
         'light-teal': '#0A9396',
         'mint': '#94D2BD',
         'beige': '#E9D8A6',
