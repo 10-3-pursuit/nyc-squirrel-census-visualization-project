@@ -1,8 +1,10 @@
 import React from 'react';
 import { formatDate, getImageUrl, generateNameFromID } from '../Helpers/SingleSquirrelHelper';
+import { getRegion } from '../Helpers/SquirrelIndexHelper';
+
 
 function SquirrelSingle({ squirrel }) {
-    // Format the date from "10142018" to "May 3, 2018"
+    // Format the date from "10142018" to "May 3, 2018 example"
 
 
      // Get the image URL for the squirrel
@@ -17,8 +19,8 @@ function SquirrelSingle({ squirrel }) {
                 <div className="p-8">
                 <p className="text-gray-800 font-bold">Name: {squirrelName}</p>
                     <p className="text-gray-800">ID: {squirrel.unique_squirrel_id}</p>
+                    <p className="text-gray-800">Location: {getRegion(squirrel.hectare)} Central Park</p>
                     <p className="text-gray-600">Date: {formatDate(squirrel.date)}</p>
-                    {/* Add more squirrel data here */}
                 </div>
             </div>
         </div>
