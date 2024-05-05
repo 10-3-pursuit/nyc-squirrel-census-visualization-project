@@ -45,7 +45,7 @@ const SquirrelDetailed = () => {
         <>
         <div className="overflow-hidden">
             <h3 className='w-full text-3xl text-red whitespace-nowrap animation-scroll' style={{ fontFamily: 'Silkscreen, sans-serif', fontStyle: 'normal' }}>
-            <em>{squirrelName}</em> was spotted {squirrel.location ?? "at Central Park"} {squirrel.specific_location ?? "just chilling"} on {formatDate(squirrel.date)}!
+            <em>{squirrelName}</em> was spotted on {squirrel && formatDate(squirrel.date)}!
             </h3>
         </div>
         <div className="h-screen md:px-20 md:py-5 bg-cover bg-center bg-fixed" style={{ backgroundImage: "url('https://res.cloudinary.com/dwygxzqku/image/upload/v1714890505/SquirrelQuest/jo-1o8-ns6svD0-unsplash_kafaft.jpg')" }}>
