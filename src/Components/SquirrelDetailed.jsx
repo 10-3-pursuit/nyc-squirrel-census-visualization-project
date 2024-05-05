@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { formatDate, getImageUrl, generateNameFromID } from '../Helpers/SingleSquirrelHelper';
+import '../App.css';
 
 const SQUIRREL_API = import.meta.env.VITE_SQUIRREL_BASE_URL;
 const VITE_SQUIRREL_TOKEN = import.meta.env.VITE_SQUIRREL_TOKEN;
@@ -41,7 +42,13 @@ const SquirrelDetailed = () => {
     return (
         // https://res.cloudinary.com/dwygxzqku/image/upload/v1714886654/SquirrelQuest/acorn-background.jpg
         // <div className="bg-dark-teal text-beige px-5 md:px-20 h-screen">
-        <div className="px-5 py-10 md:px-20 md:py-5 bg-cover bg-center bg-fixed" style={{ backgroundImage: "url('https://res.cloudinary.com/dwygxzqku/image/upload/v1714890505/SquirrelQuest/jo-1o8-ns6svD0-unsplash_kafaft.jpg')" }}>
+        <>
+        <div className="overflow-hidden">
+            <h3 className='w-full text-3xl text-red whitespace-nowrap animation-scroll' style={{ fontFamily: 'Silkscreen, sans-serif', fontStyle: 'normal' }}>
+            <em>{squirrelName}</em> was spotted {squirrel.location ?? "at Central Park"} {squirrel.specific_location ?? "just chilling"} on {formatDate(squirrel.date)}!
+            </h3>
+        </div>
+        <div className="h-screen md:px-20 md:py-5 bg-cover bg-center bg-fixed" style={{ backgroundImage: "url('https://res.cloudinary.com/dwygxzqku/image/upload/v1714890505/SquirrelQuest/jo-1o8-ns6svD0-unsplash_kafaft.jpg')" }}>
             {/* <span class="box-decoration-clone bg-gradient-to-r from-indigo-600 to-pink-500 text-white px-2 ..."> */}
             <br/>
             <h1 className="grid place-items-center box-decoration-clone bg-gradient-to-r from-light-teal/80 to-red-orange/80 text-white text-7xl px-10 rounded-s">
@@ -57,16 +64,22 @@ const SquirrelDetailed = () => {
                     {squirrel ? (
                         // for transparent effect and keeping size consistent plus padding
                             <div className="grid place-items-center w-400 rounded-xl bg-black/40 p-10">
-                                <div className="md:flex-shrink-0">
+                                <div className="md:flex-shrink-3">
                                     {/* put a hover effect thingy */}
-                                    <img className="max-h-200 rounded-xl shadow-xl object-cover transition duration-300 ease-in-out transform hover:scale-105" src={imageUrl} alt={squirrelName}/>
+                                    <img className="h-auto w-auto max-w-[50vw] max-h-[50vh] duration-300 ease-in-out transform hover:scale-105" src={imageUrl} alt={squirrelName}/>
+
+                                    {/* <img className="h-100 w-full object-contain md:h-full md:w-80 max-h-100 transition duration-300 ease-in-out transform hover:scale-105" src={imageUrl} alt={squirrelName}/> */}
                                 </div>
                                 <br/>
+                                
                                 <h2 className="italic hover:not-italic text-5xl text-beige" style={{ fontFamily: 'Poetsen One, sans-serif', fontStyle: 'normal' }}>About {isLoading ? "Loading..." : squirrel ? squirrelName : "Ms. Squirrel No Name"}:</h2>
-                                <h3 className='text-3xl text-mint' style={{ fontFamily: 'Poetsen One, sans-serif', fontStyle: 'normal' }}>
+                                
+                                {/* <div className="w-50 h-10 overflow-hidden">
+                                <h3 className='text-3xl text-red bg-black whitespace-nowrap animation-scroll' style={{ fontFamily: 'Silkscreen, sans-serif', fontStyle: 'normal' }}>
                                     <em>{squirrelName}</em> was spotted {squirrel.location ?? "at Central Park"} {squirrel.specific_location ?? "just chilling"} on {formatDate(squirrel.date)}!
                                 </h3>
-                                <p className='w-400 rounded-xl bg-black/40 p-3 text-1xl text-beige' style={{ fontFamily: 'Poetsen One, sans-serif', fontStyle: 'normal' }}>
+                                </div> */}
+                                <p className='w-400 rounded-xl bg-black/40 p-3 text-lg text-beige' style={{ fontFamily: 'Poetsen One, sans-serif', fontStyle: 'normal' }}>
                                     Once upon a sunny afternoon in the heart of NYC's bustling Central Park, a curious squirrel named <em>{squirrelName}</em>, distinguished by the code <em>{squirrel.unique_squirrel_id}</em>, nestled atop a sturdy branch of a grand oak tree. <em>{squirrelName}</em>, with its sleek {squirrel.primary_fur_color ?? "unique"}, {squirrel.highlight_fur_color ?? "beautiful"} fur and bright eyes, appeared to be lost in thought, its bushy tail draped lazily behind it.
                                 {/* </p>
                                 <p className='w-400 rounded-xl bg-black/40 p-3 text-1xl'> */}
@@ -94,6 +107,7 @@ const SquirrelDetailed = () => {
                 </div>
             )}
         </div>
+        </>
     );
 }
 

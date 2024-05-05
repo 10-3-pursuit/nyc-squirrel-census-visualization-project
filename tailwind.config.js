@@ -12,7 +12,7 @@ export default {
       },
       colors: {
         'black': '#001219',
-        'dark-teal': '#005F73',
+        'dark-teal': '#007912',
         'light-teal': '#0A9396',
         'mint': '#94D2BD',
         'beige': '#E9D8A6',
@@ -27,7 +27,8 @@ export default {
       },
       fontFamily: {
         "noto-sans": ['"Noto Sans Symbols"', "sans-serif"],
-        'poetsen-one': ['"Poetsen One"', 'sans-serif']
+        'poetsen-one': ['"Poetsen One"', 'sans-serif'],
+        'silkscreen': ['"Silkscreen"', 'sans-serif']
       },
       fontWeight: {
         // Define weight classes from 100 to 900

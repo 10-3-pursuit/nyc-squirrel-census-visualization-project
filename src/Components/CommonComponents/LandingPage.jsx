@@ -13,7 +13,7 @@ const LandingPage = () => {
                   Welcome to SquirrelQuest
                 </h1>
                 <p className="text-lg md:text-xl mb-8">
-
+{/* Wanna try this for landing page - one with pic of squirrels and another a pic of central park: https://www.w3schools.com/howto/tryhow_css_parallax_demo.htm */}
                 Embark on an enchanting adventure through Central Park with SquirrelQuest. Our app guides you to the spots where these furry creatures dwell, allowing you to immerse yourself in their world. Dive into captivating stories about their antics and behaviors, enriching your experience as you explore the park. SquirrelQuest invites you to discover the beauty of nature and the charm of New York's iconic green oasis like never before.
                 </p>
                 <button
