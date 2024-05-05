@@ -15,6 +15,8 @@ function SquirrelIndex() {
     const [squirrels, setSquirrels] = useState([]);
     const [filteredSquirrels, setFilteredSquirrels] = useState([]);
     const [filter, setFilter] = useState(null); 
+    const [searchQuery, setSearchQuery] = useState('');
+    const [filteredSearchSquirrels, setFilteredSearchSquirrels] = useState([]);
     const navigate = useNavigate();
 
 
@@ -35,47 +37,77 @@ function SquirrelIndex() {
         fetchSquirrels();
     }, []);
 
-        // Effect to update filtered squirrels when filter changes
-        useEffect(() => {
-            if (filter) {
-                console.log("THe Filter : ",filter)
-                // Reverse the region to get the hectare-letter combinations
-                const region = reverseRegion(filter);
-                // Filter squirrels based on the region
-                const filtered = squirrels.filter(squirrel => {
-                    const squirrelLocation = squirrel.hectare;
-                    return region.some(hectareLetter => squirrelLocation === hectareLetter);
-                });
-                console.log(filtered)
-                setFilteredSquirrels(filtered);
-            } else {
-                // If no filter is selected, set filtered squirrels to the original list
-                setFilteredSquirrels(squirrels);
-            }
-        }, [filter, squirrels]);
+    // Effect to update filtered squirrels when filter changes
+    useEffect(() => {
+        if (filter) {
+            console.log("THe Filter : ",filter)
+            // Reverse the region to get the hectare-letter combinations
+            const region = reverseRegion(filter);
+            // Filter squirrels based on the region
+            const filtered = squirrels.filter(squirrel => {
+                const squirrelLocation = squirrel.hectare;
+                return region.some(hectareLetter => squirrelLocation === hectareLetter);
+            });
+            console.log(filtered)
+            setFilteredSquirrels(filtered);
+        } else {
+            // If no filter is selected, set filtered squirrels to the original list
+            setFilteredSquirrels(squirrels);
+        }
+    }, [filter, squirrels]);
 
+    // Effect to update filtered search squirrels when search query changes
+    useEffect(() => {
+        if (searchQuery) {
+            const filteredSearch = filteredSquirrels.filter(squirrel => {
+                const squirrelName = generateNameFromID(squirrel.unique_squirrel_id);
+                return (
+                    squirrelName.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                    squirrel.unique_squirrel_id.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                    squirrel.hectare.toLowerCase().includes(searchQuery.toLowerCase())
+                );
+            });
+            setFilteredSearchSquirrels(filteredSearch);
+        } else {
+            // If no search query, set filtered search squirrels to the same as filtered squirrels
+            setFilteredSearchSquirrels(filteredSquirrels);
+        }
+    }, [searchQuery, filteredSquirrels]);
+
+    // Navigate to Specific squirrel using id when clicked
     const handleClick = (id) => {
         navigate(`/squirrels/${id}`);
     };
 
-
     return (
         <div className="container mx-auto px-20 p-10">
-            <select value={filter} onChange={(e) => setFilter(e.target.value)} className="my-4 p-2">
-                <option value="">Select Location</option>
-                <option value="EastSouth">SouthEast</option>
-                <option value="EastCenter">CenterEast</option>
-                <option value="EastNorth">NorthEast</option>
-                <option value="CenterSouth">CenterSouth</option>
-                <option value="Center">Center</option>
-                <option value="CenterNorth">CenterNorth</option>
-                <option value="WestSouth">SouthWest</option>
-                <option value="WestCenter">CenterWest</option>
-                <option value="WestNorth">NorthCenter</option>
-            </select>
+            <div className="flex items-center justify-center">
+                {/* SearchBar */}
+                <input
+                    type="text"
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    placeholder="Search by name, ID, or hectare..."
+                    className=" mt-4 mb-10 p-2 border border-black rounded-lg mr-4 w-full"
+                />
+                {/* DropDown */}
+                <select value={filter} onChange={(e) => setFilter(e.target.value)} className="mt-4 mb-10 p-2 border border-black rounded-lg ">
+                    <option value="">Select Location</option>
+                    <option value="EastSouth">SouthEast</option>
+                    <option value="EastCenter">CenterEast</option>
+                    <option value="EastNorth">NorthEast</option>
+                    <option value="CenterSouth">CenterSouth</option>
+                    <option value="Center">Center</option>
+                    <option value="CenterNorth">CenterNorth</option>
+                    <option value="WestSouth">SouthWest</option>
+                    <option value="WestCenter">CenterWest</option>
+                    <option value="WestNorth">NorthCenter</option>
+                </select>
+            </div>
+            {/* FilterdSquirrels */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {filteredSquirrels &&
-                    filteredSquirrels
+                {filteredSearchSquirrels &&
+                    filteredSearchSquirrels
                         .filter(squirrel => squirrel.unique_squirrel_id !== null)
                         .map(squirrel => (
                             <div key={squirrel.unique_squirrel_id} className="h-full cursor-pointer" onClick={() => handleClick(squirrel.unique_squirrel_id)}>
