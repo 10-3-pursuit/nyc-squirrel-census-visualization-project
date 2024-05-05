@@ -70,6 +70,5 @@ export function reverseRegion(region) {
             result.push(`${number<=9?"0"+number:number}${letter}`);
         });
     }
-    console.log(result)
     return result;
 }

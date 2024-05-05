@@ -4,7 +4,7 @@ import { getRegion } from '../Helpers/SquirrelIndexHelper';
 
 
 function SquirrelSingle({ squirrel }) {
-    // Format the date from "10142018" to "May 3, 2018"
+    // Format the date from "10142018" to "May 3, 2018 example"
 
 
      // Get the image URL for the squirrel
