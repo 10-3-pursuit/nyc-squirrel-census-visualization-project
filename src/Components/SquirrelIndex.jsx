@@ -23,7 +23,7 @@ function SquirrelIndex() {
     useEffect(() => {
         const fetchSquirrels = async () => {
             try {
-                const response = await fetch(`${SQUIRREL_API}?$$app_token=${VITE_SQUIRREL_TOKEN}&running=true&$order=date DESC&$limit=51`);
+                const response = await fetch(`${SQUIRREL_API}?$$app_token=${VITE_SQUIRREL_TOKEN}&running=true&$order=date DESC&$limit=72`);
                 if (!response.ok) {
                     throw new Error('Failed to fetch data');
                 }
@@ -92,15 +92,15 @@ function SquirrelIndex() {
                 {/* DropDown */}
                 <select value={filter} onChange={(e) => setFilter(e.target.value)} className="mt-4 mb-10 p-2 border border-black rounded-lg ">
                     <option value="">Select Location</option>
-                    <option value="EastSouth">SouthEast</option>
-                    <option value="EastCenter">CenterEast</option>
-                    <option value="EastNorth">NorthEast</option>
-                    <option value="CenterSouth">CenterSouth</option>
+                    <option value="SouthEast">SouthEast</option>
+                    <option value="CenterEast">CenterEast</option>
+                    <option value="NorthEast">NorthEast</option>
+                    <option value="SouthCenter">SouthCenter</option>
                     <option value="Center">Center</option>
-                    <option value="CenterNorth">CenterNorth</option>
-                    <option value="WestSouth">SouthWest</option>
-                    <option value="WestCenter">CenterWest</option>
-                    <option value="WestNorth">NorthCenter</option>
+                    <option value="NorthCenter">NorthCenter</option>
+                    <option value="SouthWest">SouthWest</option>
+                    <option value="CenterWest">CenterWest</option>
+                    <option value="NorthWest">NorthWest</option>
                 </select>
             </div>
             {/* FilterdSquirrels */}
