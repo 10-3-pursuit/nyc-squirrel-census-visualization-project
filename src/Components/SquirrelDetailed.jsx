@@ -2,12 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { formatDate, getImageUrl, generateNameFromID } from '../Helpers/SingleSquirrelHelper';
 import '../App.css';
-import {
-    APIProvider, 
-    Map, 
-    AdvancedMarker,
-    Pin,
-} from '@vis.gl/react-google-maps';
+import SquirrelMap from './SquirrelMap';
 
 const SQUIRREL_API = import.meta.env.VITE_SQUIRREL_BASE_URL;
 const VITE_SQUIRREL_TOKEN = import.meta.env.VITE_SQUIRREL_TOKEN;
@@ -105,22 +100,7 @@ const SquirrelDetailed = () => {
                 )}
             </div>
             {squirrel && (
-                <div>
-                    <p>LAST SPOTTED</p> 
-                    <APIProvider apiKey={GOOGLE_MAPS_TOKEN}> 
-                        <div style={{ height: "400px", width: "400px" }}>
-                            <Map defaultZoom={15} defaultCenter={position} mapId={GOOGLE_MAP_ID}>
-                                <AdvancedMarker position={position}>
-                                    <Pin
-                                        background={"purple"} 
-                                        borderColor={"black"} 
-                                        glyphColor={"white"}
-                                    />
-                                </AdvancedMarker>
-                            </Map> 
-                        </div>
-                    </APIProvider>
-                </div>
+                <SquirrelMap GOOGLE_MAPS_TOKEN={GOOGLE_MAPS_TOKEN} GOOGLE_MAP_ID={GOOGLE_MAP_ID} position={position}/>
             )}            
         </>
     );
