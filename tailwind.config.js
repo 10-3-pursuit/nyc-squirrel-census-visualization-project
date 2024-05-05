@@ -27,6 +27,7 @@ export default {
       },
       fontFamily: {
         "noto-sans": ['"Noto Sans Symbols"', "sans-serif"],
+        'poetsen-one': ['"Poetsen One"', 'sans-serif']
       },
       fontWeight: {
         // Define weight classes from 100 to 900

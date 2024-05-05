@@ -41,11 +41,13 @@ const SquirrelDetailed = () => {
     return (
         // https://res.cloudinary.com/dwygxzqku/image/upload/v1714886654/SquirrelQuest/acorn-background.jpg
         // <div className="bg-dark-teal text-beige px-5 md:px-20 h-screen">
-        <div className="text-beige px-5 py-10 md:px-20 md:py-5 h-screen bg-cover bg-center bg-fixed md:bg-scroll" style={{ backgroundImage: "url('https://res.cloudinary.com/dwygxzqku/image/upload/v1714890505/SquirrelQuest/jo-1o8-ns6svD0-unsplash_kafaft.jpg')" }}>
+        <div className="px-5 py-10 md:px-20 md:py-5 bg-cover bg-center bg-fixed" style={{ backgroundImage: "url('https://res.cloudinary.com/dwygxzqku/image/upload/v1714890505/SquirrelQuest/jo-1o8-ns6svD0-unsplash_kafaft.jpg')" }}>
             {/* <span class="box-decoration-clone bg-gradient-to-r from-indigo-600 to-pink-500 text-white px-2 ..."> */}
             <br/>
             <h1 className="grid place-items-center box-decoration-clone bg-gradient-to-r from-light-teal/80 to-red-orange/80 text-white text-7xl px-10 rounded-s">
-                <p class="italic hover:not-italic"> {isLoading ? "Loading..." : squirrel ? squirrelName : "Ms. Squirrel No Name"}</p>
+                <p className="italic hover:not-italic" style={{ fontFamily: 'Poetsen One, sans-serif', fontStyle: 'normal' }}>
+                {/* <p className="italic hover:not-italic"> */}
+                {isLoading ? "Loading..." : squirrel ? squirrelName : "Ms. Squirrel No Name"}</p>
             </h1>
             <br/>
             {isLoading ? (
@@ -60,11 +62,11 @@ const SquirrelDetailed = () => {
                                     <img className="max-h-200 rounded-xl shadow-xl object-cover transition duration-300 ease-in-out transform hover:scale-105" src={imageUrl} alt={squirrelName}/>
                                 </div>
                                 <br/>
-                                <h2 className="italic hover:not-italic text-4xl">About {isLoading ? "Loading..." : squirrel ? squirrelName : "Ms. Squirrel No Name"}:</h2>
-                                <h3 className='text-2xl'>
+                                <h2 className="italic hover:not-italic text-5xl text-beige" style={{ fontFamily: 'Poetsen One, sans-serif', fontStyle: 'normal' }}>About {isLoading ? "Loading..." : squirrel ? squirrelName : "Ms. Squirrel No Name"}:</h2>
+                                <h3 className='text-3xl text-mint' style={{ fontFamily: 'Poetsen One, sans-serif', fontStyle: 'normal' }}>
                                     <em>{squirrelName}</em> was spotted {squirrel.location ?? "at Central Park"} {squirrel.specific_location ?? "just chilling"} on {formatDate(squirrel.date)}!
                                 </h3>
-                                <p className='w-400 rounded-xl bg-black/40 p-3 text-1xl'>
+                                <p className='w-400 rounded-xl bg-black/40 p-3 text-1xl text-beige' style={{ fontFamily: 'Poetsen One, sans-serif', fontStyle: 'normal' }}>
                                     Once upon a sunny afternoon in the heart of NYC's bustling Central Park, a curious squirrel named <em>{squirrelName}</em>, distinguished by the code <em>{squirrel.unique_squirrel_id}</em>, nestled atop a sturdy branch of a grand oak tree. <em>{squirrelName}</em>, with its sleek {squirrel.primary_fur_color ?? "unique"}, {squirrel.highlight_fur_color ?? "beautiful"} fur and bright eyes, appeared to be lost in thought, its bushy tail draped lazily behind it.
                                 {/* </p>
                                 <p className='w-400 rounded-xl bg-black/40 p-3 text-1xl'> */}
