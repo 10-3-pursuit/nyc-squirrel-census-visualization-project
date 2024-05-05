@@ -40,7 +40,6 @@ function SquirrelIndex() {
     // Effect to update filtered squirrels when filter changes
     useEffect(() => {
         if (filter) {
-            console.log("THe Filter : ",filter)
             // Reverse the region to get the hectare-letter combinations
             const region = reverseRegion(filter);
             // Filter squirrels based on the region
