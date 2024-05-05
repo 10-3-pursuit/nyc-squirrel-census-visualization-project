@@ -3,6 +3,8 @@ import SquirrelSingle from './SquirrelSingle';
 import { useNavigate } from 'react-router-dom';
 
 import {reverseRegion} from '../Helpers/SquirrelIndexHelper'
+import { generateNameFromID } from '../Helpers/SingleSquirrelHelper';
+
 
 
 const SQUIRREL_API = import.meta.env.VITE_SQUIRREL_BASE_URL;
