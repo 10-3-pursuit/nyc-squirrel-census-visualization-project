@@ -16,6 +16,8 @@
 }
 /* scroll using tailwind */
 /* https://www.w3schools.com/cssref/tryit.php?filename=trycss3_keyframes2 */
+
+/* need to fix width */
 @keyframes scroll {
     0% {
       transform: translateX(0%);
@@ -26,5 +28,5 @@
 }
 
 .animation-scroll {
-    animation: scroll 15s linear infinite;
+    animation: scroll 15s infinite;
 }
