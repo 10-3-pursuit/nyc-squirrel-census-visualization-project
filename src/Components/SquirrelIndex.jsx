@@ -47,7 +47,6 @@ function SquirrelIndex() {
                 const squirrelLocation = squirrel.hectare;
                 return region.some(hectareLetter => squirrelLocation === hectareLetter);
             });
-            console.log(filtered)
             setFilteredSquirrels(filtered);
         } else {
             // If no filter is selected, set filtered squirrels to the original list
