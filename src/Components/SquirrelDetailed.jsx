@@ -66,7 +66,8 @@ const SquirrelDetailed = () => {
                             <div className="grid place-items-center w-400 rounded-xl bg-black/40 p-10">
                                 <div className="md:flex-shrink-3">
                                     {/* put a hover effect thingy */}
-                                    <img className="h-auto w-auto max-w-[50vw] max-h-[50vh] duration-300 ease-in-out transform hover:scale-105" src={imageUrl} alt={squirrelName}/>
+                                    <img className="h-auto w-auto max-w-[50vw] max-h-[50vh]
+                                    rounded-3xl duration-300 ease-in-out transform hover:scale-105" src={imageUrl} alt={squirrelName}/>
 
                                     {/* <img className="h-100 w-full object-contain md:h-full md:w-80 max-h-100 transition duration-300 ease-in-out transform hover:scale-105" src={imageUrl} alt={squirrelName}/> */}
                                 </div>
