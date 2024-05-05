@@ -1,3 +1,4 @@
+/* importing Google font styles */
 .poetsen-one-regular {
     font-family: "Poetsen One", sans-serif;
     font-weight: 400;
@@ -29,4 +30,38 @@
 
 .animation-scroll {
     animation: scroll 15s infinite;
+}
+
+/* Modal CSS */
+/* dimming app background */
+div.modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+}
+
+div.modal-content {
+  background-color: rgba(255, 124, 139, 0.711);
+  margin: 9% auto;
+  padding: 0rem 2rem 1rem 2rem;
+  border: 0.15rem dotted #ebec9a;
+  width: fit-content;
+  border-radius: 2rem;
+}
+
+div.modal p {
+  color:rgb(217, 255, 225);
+}
+
+header.modal-header span.close {
+  display: flex;
+  width: min-content;
+  margin-bottom: 1rem;
+  font-size: 3rem;
+  color: rgb(251, 220, 180);
+  cursor: pointer;
 }

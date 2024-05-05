@@ -3,6 +3,8 @@ import SquirrelSingle from './SquirrelSingle';
 import { useNavigate } from 'react-router-dom';
 import {reverseRegion} from '../Helpers/SquirrelIndexHelper'
 import { generateNameFromID } from '../Helpers/SingleSquirrelHelper';
+import Modal from './CommonComponents/Modal';
+import '../App.css';
 
 const SQUIRREL_API = import.meta.env.VITE_SQUIRREL_BASE_URL;
 const VITE_SQUIRREL_TOKEN = import.meta.env.VITE_SQUIRREL_TOKEN;
@@ -13,6 +15,7 @@ function SquirrelIndex() {
     const [filter, setFilter] = useState(null); 
     const [searchQuery, setSearchQuery] = useState('');
     const [filteredSearchSquirrels, setFilteredSearchSquirrels] = useState([]);
+    const [isModalOpen, setIsModalOpen] = useState(false);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -72,8 +75,22 @@ function SquirrelIndex() {
         navigate(`/squirrels/${id}`);
     };
 
+    // --- view map modal fx---
+    const openModal = () => {
+        setIsModalOpen(true);
+      };
+    
+    const closeModal = () => {
+        setIsModalOpen(false);
+      };
+
     return (
         <div className="container mx-auto px-20 p-10">
+            {/* buttons for opening and closing map modal */}
+            <button onClick={openModal} className='delete-button'>
+              View Map
+            </button>
+            <Modal isOpen={isModalOpen} onCancel={closeModal} />
             <div className="flex items-center justify-center">
                 {/* SearchBar */}
                 <input
