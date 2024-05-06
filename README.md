@@ -1,116 +1,116 @@
-# NYC Squirrel Census Visualization Project
+# SquirrelQuest
 
-<img src="./assets/squirrels.jpg" width="500" height="500">
+![SquirrelQuest](https://res.cloudinary.com/dm8xhvx4t/image/upload/v1714955966/SquirrelQuestBanner_po0apm.jpg)
 
-## Project Overview
+## Overview
 
-In this project, you will create an interactive web application using React to visualize and analyze the data from the New York City Squirrel Census. Your application will retrieve data from the provided API and possibly other data sources to present insights through visualizations, comparisons, and interactive elements.
+SquirrelQuest is a web application designed to help users explore and learn more about squirrels in Central Park. Whether you're a wildlife enthusiast, a nature lover, or simply curious about these furry creatures, SquirrelQuest provides an interactive platform for discovering information about the squirrels spotted in the park.
 
-## Real-World Relevance
+## Visit our live site
 
-This project mirrors the types of tasks that developers often encounter in the workplace. In many roles, developers are required to:
+[Link to SquirrelQuest website]()
 
-- **Integrate with APIs**: Many applications depend on external data sources and services. Learning to integrate and work with APIs, as you will with the NYC Squirrel Census API, is a fundamental skill for developers.
+## Frontend Features
 
-- **Create Interactive User Interfaces**: The ability to build dynamic and interactive user interfaces is crucial. This project demands that you not only fetch and display data but also create a user experience that allows for interaction and exploration, which is key in customer-facing applications.
+- **Squirrel Index**: Browse a comprehensive list of squirrels spotted in Central Park, including details such as name, unique ID, location, and date spotted.
+- **Squirrel Details**: View detailed information about each squirrel, including images, name, unique ID, location, and date spotted.
+- **Interactive Map**: Utilize the interactive map feature to visualize the location where each squirrel was last spotted in Central Park.
+- **Search and Filter**: Use the search bar and filter functionality to narrow down the list of squirrels based on specific criteria such as location, date spotted, or unique ID.
+- **Responsive Design**: Enjoy a seamless user experience across various devices and screen sizes, thanks to SquirrelQuest's responsive design.
 
-- **Data Storytelling**: One of the most powerful aspects of data visualization is its ability to tell a story. Through this project, you will learn how to present data in a way that narrates the habits and patterns of NYC squirrels, providing insights that can be understood at a glance. Effective data storytelling can influence decision-making and drive action in business settings, making it an invaluable skill for developers who work with data-intensive applications.
+## Frontend Technology Stack
 
-- **Visualize Data**: The demand for data visualization is growing across industries as businesses seek to gain insights from data and communicate these insights effectively. Developing skills in building tools that can graphically represent data helps in making information more accessible and actionable.
+### React.js
+- **Description**: React.js was used for developing the frontend of the application. It facilitated the creation of interactive user interfaces through the use of components, state management, and hooks.
+- **Components**: Functional components were utilized extensively throughout the application to create reusable UI elements.
+- **State Management**: React's useState and useEffect hooks were employed for managing component-level state and side effects, respectively.
+- **Hooks**: Custom hooks were implemented to encapsulate and reuse stateful logic across different components.
 
-- **Work in Teams**: Collaboration is a cornerstone of modern software development. Working in teams on this project will help you learn how to divide tasks, integrate code, and blend different ideas and approaches effectively.
+### Tailwind CSS
+- **Description**: Tailwind CSS was leveraged for styling the application, providing a utility-first approach to CSS that enabled rapid development and customization of the user interface.
+- **Utility-first CSS**: Tailwind's utility classes were used to apply styles directly to HTML elements, allowing for quick prototyping and consistent styling across the application.
+- **Responsive Design**: Tailwind's responsive design utilities were utilized to ensure that the application was optimized for various screen sizes and devices.
 
-- **Problem Solving and Innovation**: This project challenges you to go beyond simply displaying data, pushing you to think about how best to analyze and present it to end-users in an engaging manner. This kind of problem-solving and innovative thinking is highly valued in development roles.
+### React Router
+- **Description**: React Router was employed for handling navigation within the application, enabling seamless transitions between different views and components.
+- **Routing**: React Router's Route component was used to define routes for different pages and components within the application.
+- **Dynamic Routing**: Parameters and nested routes were utilized to create dynamic routes that could adapt to changing data and user interactions.
 
-By completing this project, you not only learn technical skills but also gain experience in how these skills are applied in a professional context to solve real-world problems and add value to a business or organization.
+### @vis.gl/react-google-maps
+- **Description**: The `@vis.gl/react-google-maps` library was integrated into the application to incorporate Google Maps functionality, specifically for displaying the location of squirrels on a map.
+- **Google Maps Integration**: This library provided components such as Map, AdvancedMarker, and Pin, which were utilized to render interactive maps and mark the positions of squirrels.
+- **API Integration**: The library facilitated the integration of Google Maps API, allowing the application to access and display map data seamlessly within the React environment.
+- **Customization**: Various customization options, such as setting default zoom levels and marker styles, were utilized to tailor the map display according to the application's requirements.
 
-## Objectives
+## APIs Used
 
-- **Use React**: You will use React and any other npm packages and/or frameworks you wish in order to create your application. There are no requirements on which technologies you use.
-- **Use CSS**: Make your project visually appealing through Vanilla CSS or any CSS Framework you wish to use
-- **Fetch Data**: Your application must consume the NYC Squirrel Census API and can optionally use other APIs or data from the web.
-- **Data Manipulation**: Include calculations to make comparisons and derive insights from the data.
-- **Data Storytelling**: Craft narratives around the data. Showcase how data can be used to tell stories and convey insights effectively through your visualizations.
-- **Data Visualization**: Present the data in an engaging and interactive way. You can use dashboards, tables, charts, heatmaps, or even creative text displays like word art.
-- **Beyond Display**: _\*\* Do not merely fetch and display data;_ add value by processing, filtering, and summarizing before presenting it.
+- **2018 Central Park Squirrel Census - Squirrel Data API**: This API provides data from the 2018 Central Park Squirrel Census, offering information about squirrel sightings and observations in Central Park. For more details, you can visit the [API documentation](https://data.cityofnewyork.us/Environment/2018-Central-Park-Squirrel-Census-Squirrel-Data/vfnx-vebw/about_data).
 
-## Requirements
+- **2018 Central Park Squirrel Census - Stories API**: This API contains stories and anecdotes related to the 2018 Central Park Squirrel Census, offering additional insights and narratives about the squirrel population in Central Park. For further information, you can explore the [API documentation](https://data.cityofnewyork.us/Environment/2018-Central-Park-Squirrel-Census-Stories/gfqj-f768/about_data).
 
-- **API Usage**: Must use the [NYC Squirrel Census API](https://data.cityofnewyork.us/Environment/2018-Central-Park-Squirrel-Census-Squirrel-Data/vfnx-vebw/about_data). (optional to use any other supplemental APIs)
-- **Interactivity**: Your app should allow user interaction to explore different aspects of the data.
-- **Presentation**: Show us your app and tell us the story of your chosen data.
+- **Maps JavaScript API**: The Maps JavaScript API provides a way to embed Google Maps into web pages using JavaScript. It allows developers to customize maps with their own content and imagery, as well as add interactivity and functionality. For detailed documentation, you can refer to the [Maps JavaScript API documentation](https://developers.google.com/maps/documentation/javascript).
 
-## Getting Started
+## Getting Started Locally
 
-1. **Fork and Clone the Repository**:
-   - Start by forking this repository to your GitHub account. This will create a copy of the repository under your own GitHub profile.
-   - After forking, go to your GitHub profile, find the forked repository, and clone it to your local machine.
-2. **Explore the API**: Familiarize yourself with the [NYC Squirrel Census API](https://data.cityofnewyork.us/Environment/2018-Central-Park-Squirrel-Census-Squirrel-Data/vfnx-vebw/about_data). Understand the data fields and response format.
-3. **Plan Your Application**:
-   - **Decide on the type of visualization and comparison metrics**:
-     - **Example Comparison**: Compare the frequency of squirrel activities such as foraging and eating across different parks in NYC. Calculate and visualize the percentage of squirrels engaged in these activities within each park to identify which park has the most active squirrel population.
-     - Consider how to display this information. You might use a dahboard or bar chart to represent each park with bars colored differently for each activity. Alternatively, a pie chart for each park could show the proportion of each activity. Or your narrative could be displayed in a completely different way than charts and graphs. Be creative. Use the [Inspiration](#inspiration) section for ideas.
-     - **Interactive Components Requirement**: You are required to create at least one interactive component, that represents your data narrative. You can choose to build this as one comprehensive component or as several smaller, interconnected components, each displaying different facets of the data.
-   - **Identify any additional APIs or datasets you might want to integrate**:
-     - You might find it helpful to integrate additional data you retrieve elsewhere either through other APIs or from retrieving subject info through another website.
-4. **Development**:
-   - Set up API calls to fetch the data.
-   - Implement the UI components.
-   - Add interactivity and data processing logic.
-5. **Testing**: Ensure your app works and has no major bugs.
+To run SquirrelQuest locally on your machine, follow these steps:
 
-## Submission
+### Prerequisites
 
-- Make a pull request from your repo to this repository
+- Node.js and npm installed on your machine.
 
-## Presentation
+### Installation
 
-- **Present Your Project**: At the end of the project, you will present your application to the cohort. This presentation should include a demonstration of the functionality, an explanation of the key features, and a brief discussion of the challenges you faced and the solutions you implemented.
+1. **Clone the repository**
 
-## Resources
+    ```sh
+    git clone <repository-url>
+    cd squirrelquest
+    ```
 
-### Data
+2. **Install NPM packages**
 
-- [NYC Open Data Squirrel Census Data](https://data.cityofnewyork.us/Environment/2018-Central-Park-Squirrel-Census-Squirrel-Data/vfnx-vebw/about_data)
-- [Squirrel Cenus Data API](https://dev.socrata.com/foundry/data.cityofnewyork.us/vfnx-vebw)
-- [Querying Data](https://dev.socrata.com/docs/queries/)
-- [Filtering Data](https://dev.socrata.com/docs/filtering.html)
-- [SODA Consumer API Getting Started](https://dev.socrata.com/docs/filtering.html)
+    ```sh
+    npm install
+    ```
 
-### Charts
+3. **Create an .env file and fill these variables**
 
-Charts are not the only way to display your data narrative and visualization. If you do choose to use them, here are a few options. Do your research to find other options.
+    ```sh
+   VITE_SQUIRREL_BASE_URL=
+   VITE_STORY_BASE_URL=
+   VITE_SQUIRREL_TOKEN=
+   VITE_GOOGLE_MAPS_TOKEN=
+   VITE_GOOGLE_MAP_ID=
+    ```
 
-#### PlotlyJS
 
-- [Docs](https://plotly.com/javascript/)
-- [NPM package](https://www.npmjs.com/package/plotly.js/v/1.47.4)
-- [Potential Video Instructions](https://www.youtube.com/watch?v=7D3kXabIUoM&ab_channel=Recoding)
+4. **Start the Application**
 
-#### ChartJS
+    ```sh
+    npm start
+    ```
 
-- [Docs](https://www.chartjs.org/docs/latest/getting-started/)
-- [NPM package Chart.js](https://www.npmjs.com/package/chart.js?activeTab=readme)
-- [NPM package React Chart JS 2](https://www.npmjs.com/package/react-chartjs-2)
-- [Potential Video Instructions](https://www.youtube.com/watch?v=ZpfseYy5Hxg&ab_channel=PedroTech)
+    The application will be available at `http://localhost:3000`.
 
-### Inspiration
+## User Stories
 
-All of these Inspirations are from a website called [Pudding.cool](https://www.pudding.cool/). They are a website that specializes in creating data visualizations.
+**Squirrel Index**
+As a user, I want to browse a comprehensive list of squirrels spotted in Central Park, including details such as name, unique ID, location, and date spotted.
 
-- [Teenagers Growing Into Adults](https://pudding.cool/2024/03/teenagers/)
-- [Women's Hoops Signature Sneakers](https://pudding.cool/2022/09/wnba-kicks/)
-- [What Makes an Album the Greatest of All Time](https://pudding.cool/2024/03/greatest-music/)
-- [Biggest National Anthem Divas](https://pudding.cool/2024/02/anthems/)
-- [Music Genres](https://pudding.cool/2023/10/genre/)
-- [What Does Happily Ever After Look Like](https://pudding.cool/2023/10/romance-covers/)
-- [NBA Champions - Crutch](https://pudding.cool/2023/06/asterisks/)
+**Squirrel Details**
+As a user, I want to view detailed information about each squirrel, including images, name, unique ID, location, and date spotted.
 
-## General Hackathon Tips & Ideas
+**Interactive Map**
+As a user, I want to visualize the location where each squirrel was last spotted in Central Park using an interactive map feature.
 
-- [Hackathon 101: 5 simple tips for beginners](https://blog.streamlit.io/hackathon-101-5-simple-tips-for-beginners/)
-- [Top 10 Prize-Winning Hackathon Project Ideas](https://www.boardinfinity.com/blog/top-10-prize-winning-hackathon-project-ideas-3/)
-- [11 Top Cool Project Ideas for your Next Hackathon](https://www.upgrad.com/blog/hackathon-project-ideas/)
-- [Hackathon Tips and Tricks](https://unstop.com/blog/hackathon-project-ideas)
+**Search and Filter**
+As a user, I want to use the search bar and filter functionality to narrow down the list of squirrels based on specific criteria such as location, date spotted, or unique ID.
 
-  Good luck, and have fun visualizing the wonderful world of NYC squirrels!
+**Responsive Design**
+As a user, I expect the application to provide a seamless user experience across various devices and screen sizes.
+
+## Stretch Goals
+
+- **React Google Maps Integration**: Integrate React Google Maps to display the location where each squirrel was last spotted directly on the map within the squirrel details page. This feature will enhance the user experience by providing a visual representation of squirrel sightings in Central Park.
+- **Advanced Search Functionality**: Enhance the search functionality with advanced filters, such as sorting by squirrel characteristics or behavior.
+- **Tailwind for Styling**: Implement Tailwind CSS for styling the project, ensuring a consistent and modern UI.
