@@ -22,9 +22,6 @@ export default {
         'red': '#AE2012',
         'burgandy': '#9B2226'
       },
-      boxShadow: {
-        'mint': '0 4px 6px -1px #94D2BD, 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
-      },
       fontFamily: {
         "noto-sans": ['"Noto Sans Symbols"', "sans-serif"],
         'poetsen-one': ['"Poetsen One"', 'sans-serif'],
