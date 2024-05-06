@@ -8,7 +8,7 @@ SquirrelQuest is a web application designed to help users explore and learn more
 
 ## Visit our live site
 
-[Link to SquirrelQuest website]()
+[Link to SquirrelQuest website](https://squirrelquest.netlify.app/)
 
 ## Frontend Features
 
