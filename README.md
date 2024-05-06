@@ -46,8 +46,6 @@ SquirrelQuest is a web application designed to help users explore and learn more
 
 - **2018 Central Park Squirrel Census - Squirrel Data API**: This API provides data from the 2018 Central Park Squirrel Census, offering information about squirrel sightings and observations in Central Park. For more details, you can visit the [API documentation](https://data.cityofnewyork.us/Environment/2018-Central-Park-Squirrel-Census-Squirrel-Data/vfnx-vebw/about_data).
 
-- **2018 Central Park Squirrel Census - Stories API**: This API contains stories and anecdotes related to the 2018 Central Park Squirrel Census, offering additional insights and narratives about the squirrel population in Central Park. For further information, you can explore the [API documentation](https://data.cityofnewyork.us/Environment/2018-Central-Park-Squirrel-Census-Stories/gfqj-f768/about_data).
-
 - **Maps JavaScript API**: The Maps JavaScript API provides a way to embed Google Maps into web pages using JavaScript. It allows developers to customize maps with their own content and imagery, as well as add interactivity and functionality. For detailed documentation, you can refer to the [Maps JavaScript API documentation](https://developers.google.com/maps/documentation/javascript).
 
 ## Getting Started Locally
@@ -77,7 +75,6 @@ To run SquirrelQuest locally on your machine, follow these steps:
 
     ```sh
    VITE_SQUIRREL_BASE_URL=
-   VITE_STORY_BASE_URL=
    VITE_SQUIRREL_TOKEN=
    VITE_GOOGLE_MAPS_TOKEN=
    VITE_GOOGLE_MAP_ID=
