@@ -13,6 +13,7 @@ const SquirrelDetailed = () => {
     const [squirrel, setSquirrel] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
     const { id } = useParams();
+    const [open, setOpen] = useState(false)
 
     useEffect(() => {
         async function fetchSquirrel() {
@@ -100,7 +101,7 @@ const SquirrelDetailed = () => {
                 )}
             </div>
             {squirrel && (
-                <SquirrelMap GOOGLE_MAPS_TOKEN={GOOGLE_MAPS_TOKEN} GOOGLE_MAP_ID={GOOGLE_MAP_ID} position={position}/>
+                <SquirrelMap GOOGLE_MAPS_TOKEN={GOOGLE_MAPS_TOKEN} GOOGLE_MAP_ID={GOOGLE_MAP_ID} position={position} open={open} setOpen={setOpen} squirrelName={squirrelName}/>
             )}            
         </>
     );
