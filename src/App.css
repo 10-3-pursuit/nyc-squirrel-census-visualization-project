@@ -44,6 +44,7 @@ div.modal {
   background-color: rgba(0,0,0,0.7);
 }
 
+/* fix width to adjust with map image - map image needs to be centered as well */
 div.modal-content {
   background-color: #0a949673;
   margin: 9% auto;
@@ -63,7 +64,7 @@ header.modal-header span.close {
   color: #E9D8A6;
   cursor: pointer;
 }
-
+/* didn't work :-( - kept for reference */
 /* .parallax {
   min-height: 500px;
   position: relative;
