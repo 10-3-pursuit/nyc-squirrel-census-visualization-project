@@ -7,17 +7,21 @@ const Modal = ({ isOpen, onCancel }) => {
 
     return (
         isOpen && (
-            <div className="modal">
-                <div className="modal-content">
+        <div className="flex justify-center items-center modal">
+            <div className="flex justify-center items-center bg-mint/50 rounded-xl mx-10 my-10 shadow-2xl  backdrop-brightness-150 backdrop-blur-lg bg-opacity-70 p-5 h-auto w-auto">
+              <div className="grid grid-cols-3 h-full w-full">
+                {/* <div className="modal-content"> */}
                     <header className="modal-header">
-                        <span className="close" onClick={onCancel}>&times; {message}</span>
+                        <button className="bg-black/80 hover:text-red text-white font-bold py-2 px-4 rounded-xl inline-block text-3xl" style={{ fontFamily: 'Poetsen One, sans-serif', fontStyle: 'normal' }} onClick={onCancel}>&times;</button>
                     </header>
-                    <img className="h-auto w-auto max-w-[50vw] max-h-[50vh]
-                    rounded-3xl duration-300 ease-in-out transform hover:scale-105 rotate-90" src={centralParkMap} alt="SquirrelMap"/>
-                    <p>{message}</p>
-                    <button onClick={onCancel}>Back to Squirrels</button>
+                    <img className="h-auto w-auto max-w-[80vw] max-h-[80vh] duration-300 ease-in-out transform hover:rotate-90 py-10" src={centralParkMap} alt="SquirrelMap"/>
+                    {/* <p>{message}</p> */}
+                    <br/>
+                    <button className="bg-black/80 hover:bg-dark-teal hover:text-mint text-white font-bold py-4 px-4 rounded-xl inline-block text-2xl"
+                    style={{ fontFamily: 'Silkscreen, sans-serif', fontStyle: 'normal' }} onClick={onCancel}>Back to Squirrels</button>
                 </div>
             </div>
+        </div>
         )
     );
 }
