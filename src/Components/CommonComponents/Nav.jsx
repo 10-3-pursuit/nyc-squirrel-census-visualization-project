@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import { User } from "lucide-react";
-import { Library } from "lucide-react";
+// import { User } from "lucide-react";
+// import { Library } from "lucide-react";
 
 const Nav = () => {
   return (
@@ -14,15 +14,16 @@ const Nav = () => {
             </div>
           </Link>
           <div className="flex items-center">
-            <Link to={"/courses"}>
-              <Library
+            <Link to={"/squirrels"}>
+              {/* <Library
                 strokeWidth={3}
                 className="text-white w-7 h-7 mr-4 md:mr-12"
-              />
+              /> */}
+              <p className="text-3xl">🐿️</p>
             </Link>
-            <Link to={"/account"}>
+            {/* <Link to={"/account"}>
               <User strokeWidth={3} className="text-white w-7 h-7" />
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>
