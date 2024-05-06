@@ -85,9 +85,10 @@ function SquirrelIndex() {
       };
 
     return (
+    <div className="h-auto bg-cover bg-center bg-fixed" style={{ backgroundImage: "url('https://res.cloudinary.com/dwygxzqku/image/upload/v1714890505/SquirrelQuest/jo-1o8-ns6svD0-unsplash_kafaft.jpg')" }}>
         <div className="container mx-auto px-20 p-10">
             {/* buttons for opening and closing map modal */}
-            <button onClick={openModal} className='delete-button'>
+            <button className="bg-black/80 hover:bg-dark-teal hover:text-mint text-white font-bold py-4 px-4 rounded-xl inline-block text-2xl" onClick={openModal} style={{ fontFamily: 'Silkscreen, sans-serif', fontStyle: 'normal' }}>
               View Map
             </button>
             <Modal isOpen={isModalOpen} onCancel={closeModal} />
@@ -129,6 +130,7 @@ function SquirrelIndex() {
                 }
             </div>
         </div>
+    </div>
     );
 }
 

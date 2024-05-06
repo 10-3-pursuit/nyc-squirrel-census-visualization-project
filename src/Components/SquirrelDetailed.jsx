@@ -62,7 +62,7 @@ const SquirrelDetailed = () => {
                 <br/>
                 <h1 className="grid place-items-center box-decoration-clone bg-gradient-to-r from-light-teal/80 to-red-orange/80 text-white text-7xl px-10 rounded-s">
                     <p className="italic hover:not-italic" style={{ fontFamily: 'Silkscreen, sans-serif', fontStyle: 'normal' }}>
-                    {isLoading ? "Loading..." : squirrel ? squirrelName : "Ms. Squirrel No Name"}</p>
+                    {isLoading ? "Loading..." : squirrel ? squirrelName : "Squirrel Not Found :'-("}</p>
                 </h1>
                 <br/>
                 {isLoading ? (
@@ -99,7 +99,7 @@ const SquirrelDetailed = () => {
                                 </p>
                                 {squirrel && (
                 <div className='w-100'>
-                    <p>LAST SPOTTED</p> 
+                    <p className='w-400 rounded-xl bg-black/70 p-3 text-xl text-white' style={{ fontFamily: 'Silkscreen, sans-serif', fontStyle: 'normal' }}>LAST SPOTTED</p> 
                     <APIProvider apiKey={GOOGLE_MAPS_TOKEN}> 
                         <div style={{ height: "300px", width: "300px" }}>
                             <Map defaultZoom={15} defaultCenter={position} mapId={GOOGLE_MAP_ID}>
@@ -117,7 +117,9 @@ const SquirrelDetailed = () => {
             )}  
                         </div>
                         ) : (
-                            <p>No squirrel found with ID: {id}</p>
+                            <div className="h-screen md:px-20 md:py-5 bg-cover bg-center bg-fixed mb-20 flex justify-center items-center" style={{ backgroundImage: "url('https://res.cloudinary.com/dwygxzqku/image/upload/v1714977396/SquirrelQuest/viktor-forgacs-I2eKb4LzXQk-unsplash_rekn7m.jpg')", opacity:0.9 }}>
+                            <p className='w-400 rounded-xl bg-black/70 p-3 text-4xl text-white' style={{ fontFamily: 'Silkscreen, sans-serif', fontStyle: 'normal' }}>No squirrel found with ID: {id}</p>
+                            </div>
                         )}
                     </div>
                 )}
