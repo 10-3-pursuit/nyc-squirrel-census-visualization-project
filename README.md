@@ -42,6 +42,13 @@ SquirrelQuest is a web application designed to help users explore and learn more
 - **API Integration**: The library facilitated the integration of Google Maps API, allowing the application to access and display map data seamlessly within the React environment.
 - **Customization**: Various customization options, such as setting default zoom levels and marker styles, were utilized to tailor the map display according to the application's requirements.
 
+## APIs Used
+
+- **2018 Central Park Squirrel Census - Squirrel Data API**: This API provides data from the 2018 Central Park Squirrel Census, offering information about squirrel sightings and observations in Central Park. For more details, you can visit the [API documentation](https://data.cityofnewyork.us/Environment/2018-Central-Park-Squirrel-Census-Squirrel-Data/vfnx-vebw/about_data).
+
+- **2018 Central Park Squirrel Census - Stories API**: This API contains stories and anecdotes related to the 2018 Central Park Squirrel Census, offering additional insights and narratives about the squirrel population in Central Park. For further information, you can explore the [API documentation](https://data.cityofnewyork.us/Environment/2018-Central-Park-Squirrel-Census-Stories/gfqj-f768/about_data).
+
+- **Maps JavaScript API**: The Maps JavaScript API provides a way to embed Google Maps into web pages using JavaScript. It allows developers to customize maps with their own content and imagery, as well as add interactivity and functionality. For detailed documentation, you can refer to the [Maps JavaScript API documentation](https://developers.google.com/maps/documentation/javascript).
 
 ## Getting Started Locally
 
