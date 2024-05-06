@@ -26,8 +26,8 @@ const AboutTheDevs = () => {
                   <div>
                     <div className="pt-2 flex flex-row">
                       {/* link is outside of app so need to change element to a and add href= */}
-                      <Link
-                        to={
+                      <a
+                        href={
                           "https://www.linkedin.com/in/juligarc91/"
                         }
                         target={"_blank"}
@@ -38,9 +38,9 @@ const AboutTheDevs = () => {
                             className="text-white w-6 h-6"
                           />
                         </div>
-                      </Link>
-                      <Link
-                        to={"https://github.com/juliGarc91"}
+                      </a>
+                      <a
+                        href={"https://github.com/juliGarc91"}
                         target={"_blank"}
                       >
                         <div className="bg-purple-500 rounded p-1 ml-4 hover:bg-black">
@@ -49,15 +49,15 @@ const AboutTheDevs = () => {
                             className="text-white w-6 h-6"
                           />
                         </div>
-                      </Link>
-                      <Link to="mailto:JulissaGarcia@pursuit.org">
+                      </a>
+                      <a href="mailto:JulissaGarcia@pursuit.org">
                         <div className="bg-green-500 rounded p-1 ml-4 hover:bg-black">
                           <Mail
                             strokeWidth={2}
                             className="text-white w-6 h-6"
                           />
                         </div>
-                      </Link>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -74,8 +74,8 @@ const AboutTheDevs = () => {
                   <div>Software Engineer</div>
                   <div>
                     <div className="pt-2 flex flex-row">
-                      <Link
-                        to={"http://www.linkedin.com/in/michael-restrepoross"}
+                      <a
+                        href={"http://www.linkedin.com/in/michael-restrepoross"}
                         target={"_blank"}
                       >
                         <div className="bg-blue-500  rounded p-1 hover:bg-black">
@@ -84,9 +84,9 @@ const AboutTheDevs = () => {
                             className="text-white w-6 h-6"
                           />
                         </div>
-                      </Link>
-                      <Link
-                        to={"https://github.com/MichaelARestrepoross"}
+                      </a>
+                      <a
+                        href={"https://github.com/MichaelARestrepoross"}
                         target={"_blank"}
                       >
                         <div className="bg-purple-500 rounded p-1 ml-4 hover:bg-black">
@@ -95,15 +95,16 @@ const AboutTheDevs = () => {
                             className="text-white w-6 h-6"
                           />
                         </div>
-                      </Link>
-                      <Link to="mailto:MichaelRestrepoross@pursuit.org">
+                      </a>
+                      <a
+                        href="mailto:MichaelRestrepoross@pursuit.org">
                         <div className="bg-green-500 rounded p-1 ml-4 hover:bg-black">
                           <Mail
                             strokeWidth={2}
                             className="text-white w-6 h-6"
                           />
                         </div>
-                      </Link>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -119,8 +120,8 @@ const AboutTheDevs = () => {
                   <div>Software Engineer</div>
                   <div>
                     <div className="pt-2 flex flex-row">
-                      <Link
-                        to={"https://www.linkedin.com/in/josebarriosa/"}
+                      <a
+                        href={"https://www.linkedin.com/in/josebarriosa/"}
                         target={"_blank"}
                       >
                         <div className="bg-blue-500  rounded p-1 hover:bg-black">
@@ -129,8 +130,8 @@ const AboutTheDevs = () => {
                             className="text-white w-6 h-6"
                           />
                         </div>
-                      </Link>
-                      <Link
+                      </a>
+                      <a
                         to={"https://github.com/josebarrios23"}
                         target={"_blank"}
                       >
@@ -140,15 +141,15 @@ const AboutTheDevs = () => {
                             className="text-white w-6 h-6"
                           />
                         </div>
-                      </Link>
-                      <Link to="mailto:JoseBarrios@pursuit.org">
+                      </a>
+                      <a to="mailto:JoseBarrios@pursuit.org">
                         <div className="bg-green-500 rounded p-1 ml-4 hover:bg-black">
                           <Mail
                             strokeWidth={2}
                             className="text-white w-6 h-6"
                           />
                         </div>
-                      </Link>
+                      </a>
                     </div>
                   </div>
                 </div>
