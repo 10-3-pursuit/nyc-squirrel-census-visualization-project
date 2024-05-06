@@ -21,11 +21,11 @@ export function getRegion(location) {
 
     // Determine horizontal position
     if (['A', 'B', 'C'].includes(letterUpperCase)) {
-        region += 'East';
+        region += 'West';
     } else if (['D', 'E', 'F'].includes(letterUpperCase)) {
         region += 'Center';
     } else if (['G', 'H', 'I'].includes(letterUpperCase)) {
-        region += 'West';
+        region += 'East';
     }
 
     // If the region is Center both vertically and horizontally
@@ -46,15 +46,15 @@ export function getRegion(location) {
 export function reverseRegion(region) {
     // Define an object mapping each region to its corresponding range of hectare-letter combinations
     const regionRanges = {
-        'SouthEast': { start: 1, end: 14, letters: ['A', 'B', 'C'] },
-        'CenterEast': { start: 15, end: 28, letters: ['A', 'B', 'C'] },
-        'NorthEast': { start: 29, end: 42, letters: ['A', 'B', 'C'] },
+        'SouthWest': { start: 1, end: 14, letters: ['A', 'B', 'C'] },
+        'CenterWest': { start: 15, end: 28, letters: ['A', 'B', 'C'] },
+        'NorthWest': { start: 29, end: 42, letters: ['A', 'B', 'C'] },
         'SouthCenter': { start: 1, end: 14, letters: ['D', 'E', 'F'] },
         'Center': { start: 15, end: 28, letters: [ 'D', 'E', 'F'] },
         'NorthCenter': { start: 29, end: 42, letters: ['D', 'E', 'F'] },
-        'SouthWest': { start: 1, end: 14, letters: ['G', 'H', 'I'] },
-        'CenterWest': { start: 15, end: 28, letters: ['G', 'H', 'I'] },
-        'NorthWest': { start: 29, end: 42, letters: ['G', 'H', 'I'] },
+        'SouthEast': { start: 1, end: 14, letters: ['G', 'H', 'I'] },
+        'CenterEast': { start: 15, end: 28, letters: ['G', 'H', 'I'] },
+        'NorthEast': { start: 29, end: 42, letters: ['G', 'H', 'I'] },
     };
 
     // Check if the region exists in the regionRanges object
