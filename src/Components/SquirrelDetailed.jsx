@@ -2,12 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { formatDate, getImageUrl, generateNameFromID } from '../Helpers/SingleSquirrelHelper';
 import '../App.css';
-import {
-    APIProvider, 
-    Map, 
-    AdvancedMarker,
-    Pin,
-} from '@vis.gl/react-google-maps';
+import SquirrelMap from './SquirrelMap';
 
 const SQUIRREL_API = import.meta.env.VITE_SQUIRREL_BASE_URL;
 const VITE_SQUIRREL_TOKEN = import.meta.env.VITE_SQUIRREL_TOKEN;
@@ -22,10 +17,10 @@ const SquirrelDetailed = () => {
     useEffect(() => {
         async function fetchSquirrel() {
             try {
-                const response = await fetch(`${SQUIRREL_API}?$$app_token=${VITE_SQUIRREL_TOKEN}`);
+                const response = await fetch(`${SQUIRREL_API}?$$app_token=${VITE_SQUIRREL_TOKEN}&unique_squirrel_id=${id}`);
                 if (response.ok) {
-                    const data = await response.json();           
-                    const squirrelById = data.find(squirrel => squirrel.unique_squirrel_id === id);
+                    const data = await response.json();    
+                    const squirrelById = data[0];
                     if (squirrelById) {
                         setSquirrel(squirrelById);
                     } else {
@@ -97,6 +92,7 @@ const SquirrelDetailed = () => {
                                     {squirrel.indifferent ? "This squirrel only focuses in its squirrel needs. It's indifferent towards people. " : "If you call the squirrel's name it might turn to look your way - it recognizes its name. "}
                                     {squirrel.runs_from ? "This squirrel gets startled easily. " : "This squirrel doesn't get startled easily. "}
                                 </p>
+
                                 {squirrel && (
                 <div className='w-100'>
                     <p className='w-400 rounded-xl bg-black/70 p-3 text-xl text-white' style={{ fontFamily: 'Silkscreen, sans-serif', fontStyle: 'normal' }}>LAST SPOTTED</p> 
@@ -124,7 +120,6 @@ const SquirrelDetailed = () => {
                     </div>
                 )}
             </div>
-          
         </>
     );
 }

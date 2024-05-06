@@ -1,3 +1,4 @@
+// SquirrelIndexHelp.js
 
 export function getRegion(location) {
     // Parse the input string
