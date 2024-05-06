@@ -12,9 +12,9 @@ function SquirrelSingle({ squirrel }) {
      const squirrelName = generateNameFromID(squirrel.unique_squirrel_id);
     return (
         <div className="bg-gray-100/60 rounded-xl mx-auto my-auto shadow-2xl  backdrop-brightness-150 backdrop-blur-md bg-opacity-90 hover:bg-mint/70
-        max-w-auto overflow-hidden h-40 md:min-h-60 p-2">
+        max-w-auto overflow-hidden h-auto md:min-h-60 p-2">
             <div className="md:flex">
-                <div className="flex-col md:flex-shrink-0">
+                <div className="flex-col md:flex-shrink-0 mb-3">
                     <img className="h-32 w-full object-cover md:h-full md:w-48 max-h-36 rounded-xl pr-2" src={imageUrl} alt="" />
                 </div>
                 <div className="p-4 bg-black/20 rounded-lg" style={{ fontFamily: 'Courier, sans-serif', fontStyle: 'normal' }}>
