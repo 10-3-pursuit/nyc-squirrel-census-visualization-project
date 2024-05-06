@@ -13,6 +13,7 @@ const SquirrelDetailed = () => {
     const [squirrel, setSquirrel] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
     const { id } = useParams();
+    const [open, setOpen] = useState(false)
 
     useEffect(() => {
         async function fetchSquirrel() {
@@ -94,23 +95,8 @@ const SquirrelDetailed = () => {
                                 </p>
 
                                 {squirrel && (
-                <div className='w-100'>
-                    <p className='w-400 rounded-xl bg-black/70 p-3 text-xl text-white' style={{ fontFamily: 'Silkscreen, sans-serif', fontStyle: 'normal' }}>LAST SPOTTED</p> 
-                    <APIProvider apiKey={GOOGLE_MAPS_TOKEN}> 
-                        <div style={{ height: "400px", width: "70vw" }}>
-                            <Map defaultZoom={15} defaultCenter={position} mapId={GOOGLE_MAP_ID}>
-                                <AdvancedMarker position={position}>
-                                    <Pin
-                                        background={"purple"} 
-                                        borderColor={"black"} 
-                                        glyphColor={"white"}
-                                    />
-                                </AdvancedMarker>
-                            </Map> 
-                        </div>
-                    </APIProvider>
-                </div>
-            )}  
+                                        <SquirrelMap GOOGLE_MAPS_TOKEN={GOOGLE_MAPS_TOKEN} GOOGLE_MAP_ID={GOOGLE_MAP_ID} position={position} open={open} setOpen={setOpen} squirrelName={squirrelName}/>
+                                )}    
                         </div>
                         ) : (
                             <div className="h-screen md:px-20 md:py-5 bg-cover bg-center bg-fixed mb-20 flex justify-center items-center" style={{ backgroundImage: "url('https://res.cloudinary.com/dwygxzqku/image/upload/v1714977396/SquirrelQuest/viktor-forgacs-I2eKb4LzXQk-unsplash_rekn7m.jpg')", opacity:0.9 }}>
