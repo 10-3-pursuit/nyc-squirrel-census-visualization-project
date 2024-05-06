@@ -2,17 +2,13 @@ import { Link } from "react-router-dom";
 import { User } from "lucide-react";
 import { Library } from "lucide-react";
 
-
-
-
 const Nav = () => {
   return (
     <div>
-      {/* <div className="bg-gradient-to-r from-cyan-500 to-blue-500 shadow-lg shadow-sky-300"> */}
-      <div className="bg-gradient-to-r from-dark-orange  to-orange shadow-lg shadow-sky-300">
-        <div className="px-4 py-4 flex flex-row justify-between">
+      <div className="bg-gradient-to-r from-dark-orange  to-orange shadow-lg shadow-slate-400">
+        <div className="p-7 flex flex-row justify-between">
           <Link to={"/"}>
-            <div className="font-bold text-2xl text-white inline-block">
+            <div className="font-bold text-2xl text-white inline-block" style={{ fontFamily: 'Silkscreen, sans-serif', fontStyle: 'normal' }}>
               <span className="">S</span>quirrel
               <span className="">Q</span>uest
             </div>

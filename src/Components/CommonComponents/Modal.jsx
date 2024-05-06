@@ -3,16 +3,18 @@ import { useEffect, useState } from 'react'; // Import useEffect and useState
 
 const Modal = ({ isOpen, onCancel }) => {
 
-  const message = "Map of Squirrels in Central Park, NYC";
+  const message = `Click to close Map of Squirrels in Central Park, NYC`;
+  const centralParkMap = "https://res.cloudinary.com/dm8xhvx4t/image/upload/v1714944061/centralParkMap_myimem.jpg"
 
     return (
         isOpen && (
             <div className="modal">
                 <div className="modal-content">
-                    <header className="modal-header"> {/* corrected class attribute */}
-                        <span className="close" onClick={onCancel}>&times;</span> {/* corrected class attribute */}
+                    <header className="modal-header">
+                        <span className="close" onClick={onCancel}>&times; {message}</span>
                     </header>
-                    <img src="https://res.cloudinary.com/dm8xhvx4t/image/upload/v1714944061/centralParkMap_myimem.jpg" alt="SquirrelMap" className='SquirrelMap'/>
+                    <img className="h-auto w-auto max-w-[50vw] max-h-[50vh]
+                    rounded-3xl duration-300 ease-in-out transform hover:scale-105 rotate-90" src={centralParkMap} alt="SquirrelMap"/>
                     <p>{message}</p>
                     {/* <button onClick={onConfirm} className="delete-button">Confirm</button> */}
                     <button onClick={onCancel}>Back to Squirrels</button>

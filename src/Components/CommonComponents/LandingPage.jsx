@@ -1,41 +1,44 @@
 import { useNavigate } from "react-router-dom";
+import "../../App.css";
 
 const LandingPage = () => {
   const navigate = useNavigate();
+  const squirrelOne= "https://res.cloudinary.com/dwygxzqku/image/upload/v1714969866/SquirrelQuest/anthony-intraversato-pT_wQgZAIU8-unsplash_kwjyh7.jpg"
   return (
-    <div className="">
-      <div>
-        <section className="bg-dark-teal text-mint px-5 md:px-20 h-screen">
-          <div className="container mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-              <div>
-                <h1 className="text-4xl md:text-6xl font-bold mb-5">
-                  Welcome to SquirrelQuest
-                </h1>
-                <p className="text-lg md:text-xl mb-8">
-{/* Wanna try this for landing page - one with pic of squirrels and another a pic of central park: https://www.w3schools.com/howto/tryhow_css_parallax_demo.htm */}
-                Embark on an enchanting adventure through Central Park with SquirrelQuest. Our app guides you to the spots where these furry creatures dwell, allowing you to immerse yourself in their world. Dive into captivating stories about their antics and behaviors, enriching your experience as you explore the park. SquirrelQuest invites you to discover the beauty of nature and the charm of New York's iconic green oasis like never before.
-                </p>
-                <button
-                  href="#"
-                  className="bg-beige hover:bg-orange text-light-teal font-bold py-3 px-6 rounded inline-block"
-                  onClick={() => navigate("/squirrels")}
-                >
-                  Get Started
-                </button>
-              </div>
-              <div>
-                <img
-                  src="https://res.cloudinary.com/dvmczcg3f/image/upload/v1711480893/CourseQuest%20-%20App/students_learning-jpg_y4hd2r.jpg"
-                  alt="Students Learning"
-                  className="w-full rounded shadow-xl"
-                />
-              </div>
-            </div>
-          </div>
+      <>
+      {/* add smooth scroll on click */}
+        <section className="h-screen bg-cover bg-center bg-fixed" style={{ backgroundImage: "url('https://res.cloudinary.com/dwygxzqku/image/upload/v1714969862/SquirrelQuest/andrey-svistunov-jgFA_cfgNHk-unsplash_klfedb.jpg')" }}> 
         </section>
-      </div>
-    </div>
+        <div className="md:px-20 md:py-5 bg-cover bg-center bg-fixed p-9" style={{ backgroundImage: "url('https://res.cloudinary.com/dwygxzqku/image/upload/v1714890505/SquirrelQuest/jo-1o8-ns6svD0-unsplash_kafaft.jpg')" }}>
+              <h1 className="p-5 text-4xl md:text-6xl font-bold mb-5 bg-black/70 text-white" style={{ fontFamily: 'Silkscreen, sans-serif', fontStyle: 'normal' }}>
+                  Welcome to SquirrelQuest
+              </h1>
+              <p className="bg-black/70 text-white text-lg md:text-5xl mb-8 p-5" style={{ fontFamily: 'Silkscreen, sans-serif', fontStyle: 'normal' }}>
+                Embark on an enchanting adventure through Central Park with SquirrelQuest. Our app guides you to the spots where these furry creatures dwell, allowing you to immerse yourself in their world. Dive into captivating stories about their antics and behaviors, enriching your experience as you explore the park. SquirrelQuest invites you to discover the beauty of nature and the charm of New York's iconic green oasis like never before.
+              </p>
+        </div>
+        {/* <div className="flex justify-center items-center w-full">
+              <video loop autoPlay muted>
+                <source src="https://s3.amazonaws.com/assets.centralparknyc.org/media/images/Spring-8.mp4" type="video/mp4" />
+              </video>
+        </div> */}
+        <section className="h-screen bg-cover bg-center bg-fixed flex justify-center items-center" style={{ backgroundImage: "url('https://res.cloudinary.com/dwygxzqku/image/upload/v1714969866/SquirrelQuest/anthony-intraversato-pT_wQgZAIU8-unsplash_kwjyh7.jpg')" }}>
+          <button
+            href="#"
+            className="bg-black/80 hover:bg-dark-teal hover:text-mint text-white font-bold py-9 px-9 rounded-xl inline-block text-7xl" style={{ fontFamily: 'Silkscreen, sans-serif', fontStyle: 'normal' }}
+            onClick={() => navigate("/squirrels")}
+          >
+            Start Quest!
+          </button>
+        </section>
+        <div className="flex justify-center items-center w-full">
+              <video loop autoPlay muted>
+                <source src="https://s3.amazonaws.com/assets.centralparknyc.org/media/images/Spring-8.mp4" type="video/mp4" />
+              </video>
+        </div>
+        <section className="h-screen bg-cover bg-center bg-fixed" style={{ backgroundImage: "url('https://res.cloudinary.com/dwygxzqku/image/upload/v1714969864/SquirrelQuest/vincent-van-zalinge-rYZHmeH4dvQ-unsplash_dpgf2c.jpg')" }}> 
+        </section>
+      </>
   );
 };
 
