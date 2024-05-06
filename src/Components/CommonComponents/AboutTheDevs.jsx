@@ -9,11 +9,11 @@ const AboutTheDevs = () => {
   return (
     <div>
       <div className="bg-white">
-        <div>
-          <div className="py-12 text-center text-4xl font-bold">
+      <div className="h-screen bg-cover bg-center bg-fixed" style={{ backgroundImage: "url('https://res.cloudinary.com/dwygxzqku/image/upload/v1714886654/SquirrelQuest/acorn-background.jpg')" }}>
+          <div className="text-white py-12 text-center text-5xl font-bold bg-black/20" style={{ fontFamily: 'Silkscreen, sans-serif', fontStyle: 'normal' }}>
             Meet the Team
           </div>
-          <hr className="mx-10 border-2" />
+          {/* <hr className="mx-10 border-2" /> */}
           <div className="grid lg:grid-cols-2 md:gap-2 ml-12 pb-24">
             <div className="bg-gray-100/50 rounded-xl mx-10 my-10 shadow-2xl  backdrop-brightness-150 backdrop-blur-3xl bg-opacity-90 hover:bg-gray-100 w-3/4">
               <div className="grid grid-cols-4 h-full">
@@ -25,9 +25,10 @@ const AboutTheDevs = () => {
                   <div>Software Engineer</div>
                   <div>
                     <div className="pt-2 flex flex-row">
+                      {/* link is outside of app so need to change element to a and add href= */}
                       <Link
                         to={
-                          "https://www.linkedin.com/in/alexander-gonzalez-can-code/"
+                          "https://www.linkedin.com/in/juligarc91/"
                         }
                         target={"_blank"}
                       >
@@ -39,7 +40,7 @@ const AboutTheDevs = () => {
                         </div>
                       </Link>
                       <Link
-                        to={"https://github.com/Alex-de-code"}
+                        to={"https://github.com/juliGarc91"}
                         target={"_blank"}
                       >
                         <div className="bg-purple-500 rounded p-1 ml-4 hover:bg-black">
