@@ -92,7 +92,7 @@ function SquirrelIndex() {
               View Map
             </button>
             <Modal isOpen={isModalOpen} onCancel={closeModal} />
-            <div className="flex items-center justify-center">
+            <div className="flex items-center justify-center  shadow-2xl">
                 {/* SearchBar */}
                 <input
                     type="text"

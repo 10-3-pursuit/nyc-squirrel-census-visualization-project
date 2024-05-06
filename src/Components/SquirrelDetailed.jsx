@@ -101,7 +101,7 @@ const SquirrelDetailed = () => {
                 <div className='w-100'>
                     <p className='w-400 rounded-xl bg-black/70 p-3 text-xl text-white' style={{ fontFamily: 'Silkscreen, sans-serif', fontStyle: 'normal' }}>LAST SPOTTED</p> 
                     <APIProvider apiKey={GOOGLE_MAPS_TOKEN}> 
-                        <div style={{ height: "300px", width: "300px" }}>
+                        <div style={{ height: "400px", width: "70vw" }}>
                             <Map defaultZoom={15} defaultCenter={position} mapId={GOOGLE_MAP_ID}>
                                 <AdvancedMarker position={position}>
                                     <Pin

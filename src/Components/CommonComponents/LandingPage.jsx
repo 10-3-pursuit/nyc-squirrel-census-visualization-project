@@ -7,12 +7,15 @@ const LandingPage = () => {
   return (
       <>
       {/* add smooth scroll on click */}
-        <section className="h-screen bg-cover bg-center bg-fixed" style={{ backgroundImage: "url('https://res.cloudinary.com/dwygxzqku/image/upload/v1714969862/SquirrelQuest/andrey-svistunov-jgFA_cfgNHk-unsplash_klfedb.jpg')" }}> 
+        <section className="flex items-center justify-center h-screen bg-cover bg-center bg-fixed" style={{ backgroundImage: "url('https://res.cloudinary.com/dwygxzqku/image/upload/v1714969862/SquirrelQuest/andrey-svistunov-jgFA_cfgNHk-unsplash_klfedb.jpg')" }}>
+          
+            <h1 className="py-4 text-4xl md:text-6xl font-bold mb-5 bg-black/70 text-white text-center" style={{ fontFamily: 'Silkscreen, sans-serif', fontStyle: 'normal' }}>
+                  Welcome to SquirrelQuest
+            </h1> 
+            
         </section>
         <div className="md:px-20 md:py-5 bg-cover bg-center bg-fixed p-9" style={{ backgroundImage: "url('https://res.cloudinary.com/dwygxzqku/image/upload/v1714890505/SquirrelQuest/jo-1o8-ns6svD0-unsplash_kafaft.jpg')" }}>
-              <h1 className="p-5 text-4xl md:text-6xl font-bold mb-5 bg-black/70 text-white" style={{ fontFamily: 'Silkscreen, sans-serif', fontStyle: 'normal' }}>
-                  Welcome to SquirrelQuest
-              </h1>
+              
               <p className="bg-black/70 text-white text-lg md:text-5xl mb-8 p-5" style={{ fontFamily: 'Silkscreen, sans-serif', fontStyle: 'normal' }}>
                 Embark on an enchanting adventure through Central Park with SquirrelQuest. Our app guides you to the spots where these furry creatures dwell, allowing you to immerse yourself in their world. Dive into captivating stories about their antics and behaviors, enriching your experience as you explore the park. SquirrelQuest invites you to discover the beauty of nature and the charm of New York's iconic green oasis like never before.
               </p>
