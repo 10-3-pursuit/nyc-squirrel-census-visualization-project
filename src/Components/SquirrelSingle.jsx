@@ -11,16 +11,21 @@ function SquirrelSingle({ squirrel }) {
      const imageUrl = getImageUrl(squirrel.primary_fur_color, squirrel.unique_squirrel_id);
      const squirrelName = generateNameFromID(squirrel.unique_squirrel_id);
     return (
-        <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl min-h-36">
+        <div className="bg-gray-100/60 rounded-xl mx-auto my-auto shadow-2xl  backdrop-brightness-150 backdrop-blur-md bg-opacity-90 hover:bg-mint/70
+        max-w-auto overflow-hidden h-40 md:min-h-60 p-2">
             <div className="md:flex">
-                <div className="md:flex-shrink-0">
-                    <img className="h-32 w-full object-cover md:h-full md:w-48 max-h-36" src={imageUrl} alt="" />
+                <div className="flex-col md:flex-shrink-0">
+                    <img className="h-32 w-full object-cover md:h-full md:w-48 max-h-36 rounded-xl pr-2" src={imageUrl} alt="" />
                 </div>
-                <div className="p-8">
-                <p className="text-gray-800 font-bold">Name: {squirrelName}</p>
-                    <p className="text-gray-800">ID: {squirrel.unique_squirrel_id}</p>
-                    <p className="text-gray-800">Location: {getRegion(squirrel.hectare)} Central Park</p>
-                    <p className="text-gray-600">Date: {formatDate(squirrel.date)}</p>
+                <div className="p-4 bg-black/20 rounded-lg" style={{ fontFamily: 'Courier, sans-serif', fontStyle: 'normal' }}>
+                <p className=" text-gray-800 font-bold text-xl">Name: {squirrelName}</p>
+                    <p className="text-gray-800 text-md">
+                        <strong>ID: </strong>{squirrel.unique_squirrel_id}</p>
+                    <p className="text-gray-800">
+                        <strong>Location: </strong
+                        >{getRegion(squirrel.hectare)} Central Park</p>
+                    <p className="text-gray-600">
+                        <strong>Date: </strong>{formatDate(squirrel.date)}</p>
                 </div>
             </div>
         </div>

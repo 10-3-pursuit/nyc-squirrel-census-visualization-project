@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Nav = () => {
   return (
     <div>
-      <div className="bg-gradient-to-r from-dark-orange  to-orange shadow-lg shadow-slate-400">
+      <div className="bg-gradient-to-r from-dark-teal to-mint shadow-lg shadow-slate-400">
         <div className="p-7 flex flex-row justify-between">
           <Link to={"/"}>
             <div className="font-bold text-2xl text-white inline-block" style={{ fontFamily: 'Silkscreen, sans-serif', fontStyle: 'normal' }}>

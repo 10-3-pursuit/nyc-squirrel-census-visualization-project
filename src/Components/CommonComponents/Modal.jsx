@@ -12,7 +12,7 @@ const Modal = ({ isOpen, onCancel }) => {
               <div className="grid grid-cols-3 h-full w-full">
                 {/* <div className="modal-content"> */}
                     <header className="modal-header">
-                        <button className="bg-black/80 hover:text-red text-white font-bold py-2 px-4 rounded-xl inline-block text-3xl" style={{ fontFamily: 'Poetsen One, sans-serif', fontStyle: 'normal' }} onClick={onCancel}>&times;</button>
+                        <button className="bg-black/80 hover:text-red text-white font-bold py-2 px-4 rounded-xl inline-block text-3xl" style={{ fontFamily: 'Courier'}} onClick={onCancel}>&times;</button>
                     </header>
                     <img className="h-auto w-auto max-w-[80vw] max-h-[80vh] duration-300 ease-in-out transform hover:rotate-90 py-10" src={centralParkMap} alt="SquirrelMap"/>
                     {/* <p>{message}</p> */}

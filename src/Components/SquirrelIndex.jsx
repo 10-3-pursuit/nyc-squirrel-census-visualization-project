@@ -85,10 +85,10 @@ function SquirrelIndex() {
       };
 
     return (
-    <div className="h-auto bg-cover bg-center bg-fixed" style={{ backgroundImage: "url('https://res.cloudinary.com/dwygxzqku/image/upload/v1714890505/SquirrelQuest/jo-1o8-ns6svD0-unsplash_kafaft.jpg')" }}>
-        <div className="container mx-auto px-20 p-10">
+    <div className="h-auto mb-auto bg-cover bg-center bg-fixed" style={{ backgroundImage: "url('https://res.cloudinary.com/dwygxzqku/image/upload/v1714890505/SquirrelQuest/jo-1o8-ns6svD0-unsplash_kafaft.jpg')" }}>
+        <div className="container mx-auto px-20 p-10 mb-16">
             {/* buttons for opening and closing map modal */}
-            <button className="bg-black/80 hover:bg-dark-teal hover:text-mint text-white font-bold py-4 px-4 rounded-xl inline-block text-2xl" onClick={openModal} style={{ fontFamily: 'Silkscreen, sans-serif', fontStyle: 'normal' }}>
+            <button className="bg-mint/90 text-dark-teal hover:bg-dark-teal hover:text-mint font-bold py-4 px-4 rounded-xl inline-block text-2xl" onClick={openModal} style={{ fontFamily: 'Silkscreen, sans-serif', fontStyle: 'normal' }}>
               View Map
             </button>
             <Modal isOpen={isModalOpen} onCancel={closeModal} />
@@ -100,9 +100,11 @@ function SquirrelIndex() {
                     onChange={(e) => setSearchQuery(e.target.value)}
                     placeholder="Search by name, ID, or hectare..."
                     className=" mt-4 mb-10 p-2 border border-black rounded-lg mr-4 w-full"
+                    style={{ fontFamily: 'Courier, sans-serif', fontStyle: 'normal' }}
                 />
                 {/* DropDown */}
-                <select value={filter} onChange={(e) => setFilter(e.target.value)} className="mt-4 mb-10 p-2 border border-black rounded-lg ">
+                <select value={filter} onChange={(e) => setFilter(e.target.value)} className="mt-4 mb-10 p-2 border border-black rounded-lg "
+                style={{ fontFamily: 'Courier, sans-serif', fontStyle: 'normal' }}>
                     <option value="">Select Location</option>
                     <option value="SouthEast">SouthEast</option>
                     <option value="CenterEast">CenterEast</option>
@@ -116,7 +118,7 @@ function SquirrelIndex() {
                 </select>
             </div>
             {/* FilterdSquirrels */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="h-auto mb-72 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {filteredSearchSquirrels &&
                     filteredSearchSquirrels
                         .filter(squirrel => squirrel.unique_squirrel_id !== null)
