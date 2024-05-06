@@ -53,11 +53,11 @@ const SquirrelDetailed = () => {
                 <em>{squirrelName}</em> was spotted on {squirrel && formatDate(squirrel.date)}!
                 </h3>
             </div>
-            <div className="h-screen md:px-20 md:py-5 bg-cover bg-center bg-fixed" style={{ backgroundImage: "url('https://res.cloudinary.com/dwygxzqku/image/upload/v1714890505/SquirrelQuest/jo-1o8-ns6svD0-unsplash_kafaft.jpg')" }}>
+            <div className="h-auto md:px-20 md:py-5 bg-cover bg-center bg-fixed" style={{ backgroundImage: "url('https://res.cloudinary.com/dwygxzqku/image/upload/v1714890505/SquirrelQuest/jo-1o8-ns6svD0-unsplash_kafaft.jpg')" }}>
                 <br/>
                 <h1 className="grid place-items-center box-decoration-clone bg-gradient-to-r from-light-teal/80 to-red-orange/80 text-white text-7xl px-10 rounded-s">
-                    <p className="italic hover:not-italic" style={{ fontFamily: 'Poetsen One, sans-serif', fontStyle: 'normal' }}>
-                    {isLoading ? "Loading..." : squirrel ? squirrelName : "Ms. Squirrel No Name"}</p>
+                    <p className="italic hover:not-italic" style={{ fontFamily: 'Silkscreen, sans-serif', fontStyle: 'normal' }}>
+                    {isLoading ? "Loading..." : squirrel ? squirrelName : "Squirrel Not Found :'-("}</p>
                 </h1>
                 <br/>
                 {isLoading ? (
@@ -66,15 +66,15 @@ const SquirrelDetailed = () => {
                     <div className="grid place-items-center">
                         {squirrel ? (
                             // for transparent effect and keeping size consistent plus padding
-                            <div className="grid place-items-center w-400 rounded-xl bg-black/40 p-10">
+                            <div className="grid place-items-center w-400 rounded-xl bg-black/70 p-10 mb-20">
                                 <div className="md:flex-shrink-3">
                                         {/* put a hover effect so pic looks cool on hover */}
                                     <img className="h-auto w-auto max-w-[50vw] max-h-[50vh]
                                         rounded-3xl duration-300 ease-in-out transform hover:scale-105" src={imageUrl} alt={squirrelName}/>
                                 </div>
                                 <br/>
-                                <h2 className="italic hover:not-italic text-5xl text-beige" style={{ fontFamily: 'Poetsen One, sans-serif', fontStyle: 'normal' }}>About {isLoading ? "Loading..." : squirrel ? squirrelName : "Ms. Squirrel No Name"}:</h2>
-                                <p className='w-400 rounded-xl bg-black/40 p-3 text-xl text-beige' style={{ fontFamily: 'Poetsen One, sans-serif', fontStyle: 'normal' }}>
+                                <h2 className="italic hover:not-italic text-5xl text-white" style={{ fontFamily: 'Silkscreen, sans-serif', fontStyle: 'normal' }}>About {isLoading ? "Loading..." : squirrel ? squirrelName : "Squirrel Not Found"}</h2>
+                                <p className='w-400 rounded-xl bg-black/70 p-3 text-xl text-white' style={{ fontFamily: 'Silkscreen, sans-serif', fontStyle: 'normal' }}>
                                     Once upon a sunny afternoon in the heart of NYC's bustling Central Park, a curious squirrel named <em>{squirrelName}</em>, distinguished by the code <em>{squirrel.unique_squirrel_id}</em>, nestled atop a sturdy branch of a grand oak tree. <em>{squirrelName}</em>, with its sleek {squirrel.primary_fur_color ?? "unique"}, {squirrel.highlight_fur_color ?? "beautiful"} fur and bright eyes, appeared to be lost in thought, its bushy tail draped lazily behind it.
                                 <br/>
                                 <br/>
@@ -92,16 +92,34 @@ const SquirrelDetailed = () => {
                                     {squirrel.indifferent ? "This squirrel only focuses in its squirrel needs. It's indifferent towards people. " : "If you call the squirrel's name it might turn to look your way - it recognizes its name. "}
                                     {squirrel.runs_from ? "This squirrel gets startled easily. " : "This squirrel doesn't get startled easily. "}
                                 </p>
+
+                                {squirrel && (
+                <div className='w-100'>
+                    <p className='w-400 rounded-xl bg-black/70 p-3 text-xl text-white' style={{ fontFamily: 'Silkscreen, sans-serif', fontStyle: 'normal' }}>LAST SPOTTED</p> 
+                    <APIProvider apiKey={GOOGLE_MAPS_TOKEN}> 
+                        <div style={{ height: "400px", width: "70vw" }}>
+                            <Map defaultZoom={15} defaultCenter={position} mapId={GOOGLE_MAP_ID}>
+                                <AdvancedMarker position={position}>
+                                    <Pin
+                                        background={"purple"} 
+                                        borderColor={"black"} 
+                                        glyphColor={"white"}
+                                    />
+                                </AdvancedMarker>
+                            </Map> 
+                        </div>
+                    </APIProvider>
+                </div>
+            )}  
                         </div>
                         ) : (
-                            <p>No squirrel found with ID: {id}</p>
+                            <div className="h-screen md:px-20 md:py-5 bg-cover bg-center bg-fixed mb-20 flex justify-center items-center" style={{ backgroundImage: "url('https://res.cloudinary.com/dwygxzqku/image/upload/v1714977396/SquirrelQuest/viktor-forgacs-I2eKb4LzXQk-unsplash_rekn7m.jpg')", opacity:0.9 }}>
+                            <p className='w-400 rounded-xl bg-black/70 p-3 text-4xl text-white' style={{ fontFamily: 'Silkscreen, sans-serif', fontStyle: 'normal' }}>No squirrel found with ID: {id}</p>
+                            </div>
                         )}
                     </div>
                 )}
             </div>
-            {squirrel && (
-                <SquirrelMap GOOGLE_MAPS_TOKEN={GOOGLE_MAPS_TOKEN} GOOGLE_MAP_ID={GOOGLE_MAP_ID} position={position}/>
-            )}            
         </>
     );
 }
