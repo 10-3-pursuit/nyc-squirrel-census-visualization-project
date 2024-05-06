@@ -11,10 +11,10 @@ function SquirrelMap({GOOGLE_MAPS_TOKEN, GOOGLE_MAP_ID, position, open, setOpen,
   const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${position.lat},${position.lng}`;
 
   return (
-    <div>
-      <p>LAST SPOTTED</p> 
+    <div className='w-100'>
+      <p className='w-400 rounded-xl bg-black/70 p-3 text-xl text-white' style={{ fontFamily: 'Silkscreen, sans-serif', fontStyle: 'normal' }}>LAST SPOTTED</p> 
       <APIProvider apiKey={GOOGLE_MAPS_TOKEN}> 
-        <div style={{ height: "400px", width: "400px" }}>
+        <div style={{ height: "400px", width: "70vw" }}>
           <Map defaultZoom={15} defaultCenter={position} mapId={GOOGLE_MAP_ID}>
             <AdvancedMarker position={position} onClick={() => setOpen(true)}>
               <Pin
