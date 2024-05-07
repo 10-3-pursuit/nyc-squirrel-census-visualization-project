@@ -9,7 +9,7 @@ const AboutTheDevs = () => {
   return (
     <div>
       <div className="bg-white">
-      <div className="h-screen bg-cover bg-center bg-fixed" style={{ backgroundImage: "url('https://res.cloudinary.com/dwygxzqku/image/upload/v1714886654/SquirrelQuest/acorn-background.jpg')" }}>
+      <div className="h-auto min-h-[300-vh] bg-cover bg-center bg-fixed" style={{ backgroundImage: "url('https://res.cloudinary.com/dwygxzqku/image/upload/v1714886654/SquirrelQuest/acorn-background.jpg')" }}>
           <div className="text-white py-12 text-center text-5xl font-bold bg-black/20" style={{ fontFamily: 'Silkscreen, sans-serif', fontStyle: 'normal' }}>
             Meet the Team
           </div>

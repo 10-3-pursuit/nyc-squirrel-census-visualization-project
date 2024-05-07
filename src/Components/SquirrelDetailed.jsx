@@ -56,7 +56,7 @@ const SquirrelDetailed = () => {
             </div>
             <div className="h-auto md:px-20 md:py-5 bg-cover bg-center bg-fixed" style={{ backgroundImage: "url('https://res.cloudinary.com/dwygxzqku/image/upload/v1714890505/SquirrelQuest/jo-1o8-ns6svD0-unsplash_kafaft.jpg')" }}>
                 <br/>
-                <h1 className="grid place-items-center box-decoration-clone bg-gradient-to-r from-light-teal/80 to-red-orange/80 text-white text-7xl px-10 rounded-s">
+                <h1 className="grid place-items-center box-decoration-clone bg-gradient-to-r from-light-teal/80 to-red-orange/80 text-white text-7xl px-10 rounded-s md-text-xl">
                     <p className="italic hover:not-italic" style={{ fontFamily: 'Silkscreen, sans-serif', fontStyle: 'normal' }}>
                     {isLoading ? "Loading..." : squirrel ? squirrelName : "Squirrel Not Found :'-("}</p>
                 </h1>
