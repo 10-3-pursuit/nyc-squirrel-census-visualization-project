@@ -10,6 +10,12 @@ SquirrelQuest is a web application designed to help users explore and learn more
 
 [Link to SquirrelQuest website](https://squirrelquest.netlify.app/)
 
+## Our Team
+
+[Michael Restrepoross](http://www.linkedin.com/in/michael-restrepoross)
+[Julissa Garcia](https://www.linkedin.com/in/juligarc91)
+[Jose Barrios](https://www.linkedin.com/in/josebarriosa/)
+
 ## Frontend Features
 
 - **Squirrel Index**: Browse a comprehensive list of squirrels spotted in Central Park, including details such as name, unique ID, location, and date spotted.
