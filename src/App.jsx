@@ -1,15 +1,22 @@
-import React from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route } from "react-router-dom";
+import NavBar from "./Components/NavBar";
+import LandingPage from "./Pages/LandingPage";
+import ChartsView from "./Pages/ChartsView";
+import AboutTheDevs from "./Pages/AboutTheDevs";
+import Footer from "./Components/Footer";
 
 const App = () => {
   return (
     <>
-      <h1>Squirrel Census Visualization Starter</h1>
+      <NavBar />
       <Routes>
-        <Route />
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/charts" element={<ChartsView />} />
+        <Route path="/about" element={<AboutTheDevs />} />
       </Routes>
+      <Footer />
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;

@@ -1,0 +1,40 @@
+/* .landing-page {
+  display: flex-box;
+  justify-content: center;
+  align-items: center;
+} */
+
+.intro {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  color: white;
+  margin: 50px;
+  padding: 10px;
+  background-color: green;
+  opacity: 0.8;
+  text-align: center;
+}
+
+.intro button {
+  color: rebeccapurple;
+}
+
+.intro button:hover {
+  color: blue;
+}
+
+.images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  z-index: 0;
+}
+
+.images img:nth-child(5) {
+  height: 640px;
+  width: 500px;
+}
+
+.images section img:nth-child(2) {
+  height: 308px;
+}
