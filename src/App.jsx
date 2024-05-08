@@ -1,13 +1,18 @@
 import React from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Link } from 'react-router-dom'
+import { SquirrelLineData } from './SquirrelLineData'
 
 const App = () => {
+
+  
   return (
     <>
-      <h1>Squirrel Census Visualization Starter</h1>
-      <Routes>
-        <Route />
-      </Routes>
+    <div className='nav'>
+      <h1>SquireDesire</h1>
+    </div>
+    <SquirrelLineData/>
+      
+
     </>
   )
 }
