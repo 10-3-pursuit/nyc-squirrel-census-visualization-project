@@ -36,3 +36,6 @@ Contributions are welcome! If you have any suggestions, bug fixes, or additional
 - Kenneth Cabral
 - Marlon Regis
 - Timothy Natal
+
+
+[Our Slides](https://tome.app/heaven-7even/squiredesire-clvv6sj820wlpo36394ld876v)
