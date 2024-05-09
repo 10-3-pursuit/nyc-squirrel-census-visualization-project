@@ -1,4 +1,8 @@
 # NYC Squirrel Census Visualization Project
+Kenneth Cabral
+Marlon Regis
+Tim Natal
+SLIDE: https://tome.app/heaven-7even/squiredesire-clvv6sj820wlpo36394ld876v
 
 <img src="./assets/squirrels.jpg" width="500" height="500">
 
